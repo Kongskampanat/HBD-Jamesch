@@ -30,7 +30,6 @@ function enterWorld(){
 
 
 }
-
 function openGift(){
 
 
@@ -39,14 +38,13 @@ const gift = document.querySelector(".gift");
 
 if(gift){
 
+    gift.classList.add("open");
 
-gift.classList.add("open");
+}
+
 
 
 createFireworks();
-
-
-}
 
 
 
@@ -57,11 +55,11 @@ alert(
 
 "🎁 Happy Birthday Jamesch ❤️\n\n" +
 
-"Welcome to your Minecraft Adventure World!\n\n" +
+"Welcome to your Minecraft Adventure World! ⛏️\n\n" +
 
-"May your life be full of happiness,\n" +
+"แฮปปี้เบิดเดย์ครับผม มีความสุขเยอะๆ อย่าหายบ่อยถึงเพื่อนจะหายบ่อย หยอกๆ คิดถึงเสมอ อยากเจอด้วย สุขภาพแข็งแรงครับ,\n" +
 
-"success and amazing adventures ⛏️✨"
+" สุขสันต์วันเกิดคับพี่เจมส์ ขอได้มีความสวัสดีมงคล ประสบสุขงดงามแก่กาลทุกเมื่อนะคับ🎂✨🫂💗 ✨"
 
 );
 
