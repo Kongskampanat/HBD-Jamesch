@@ -153,3 +153,60 @@ music.pause();
 
 
 }
+// ===============================
+// Minecraft Night Sky
+// ===============================
+
+
+function createNightSky(){
+
+
+document.body.classList.add("night");
+
+
+
+// Moon
+
+let moon =
+document.createElement("div");
+
+
+moon.className="moon";
+
+
+document.body.appendChild(moon);
+
+
+
+
+// Stars
+
+for(let i=0;i<80;i++){
+
+
+let star =
+document.createElement("div");
+
+
+star.className="star";
+
+
+star.style.left =
+Math.random()*100+"vw";
+
+
+star.style.top =
+Math.random()*60+"vh";
+
+
+star.style.animationDelay =
+Math.random()*2+"s";
+
+
+document.body.appendChild(star);
+
+
+}
+
+
+}
