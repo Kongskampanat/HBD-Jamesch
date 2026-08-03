@@ -1704,29 +1704,36 @@ border:
 }
 
 /* ข้อความในหน้าต่าง */
+/* =========================
+   ข้อความในหน้าต่าง (อัปเดตฟอนต์)
+========================= */
 .achieve-title {
-    color: #FFFF55; /* สีเหลือง Minecraft */
-    font-size: 16px;
+    color: #FFFF55; 
+    font-size: 20px; /* ปรับขนาดให้ใหญ่ขึ้นนิดหน่อยเพราะฟอนต์ไทยมักจะเล็ก */
     margin-bottom: 10px;
     text-shadow: 2px 2px 0 #3f3f15;
+    font-family: 'ARMBOX MOON Night', 'Press Start 2P', cursive; /* ใช้ฟอนต์ใหม่ */
 }
 
 .achieve-desc {
     color: #FFFFFF;
-    font-size: 12px;
+    font-size: 16px;
     margin-bottom: 25px;
+    font-family: 'ARMBOX MOON Night', 'Press Start 2P', cursive;
 }
 
 .achieve-msg {
     color: #AAAAAA;
-    font-size: 10px;
-    line-height: 2.5;
+    font-size: 14px;
+    line-height: 2;
     margin-bottom: 30px;
+    font-family: 'ARMBOX MOON Night', 'Press Start 2P', cursive;
 }
 
 .close-btn {
     margin-top: 0;
     padding: 15px 30px;
+    font-family: 'ARMBOX MOON Night', 'Press Start 2P', cursive;
 }
 
 /* สำหรับมือถือ (ซ่อน NPC หรือย่อส่วนเพื่อไม่ให้ล้นจอ) */
