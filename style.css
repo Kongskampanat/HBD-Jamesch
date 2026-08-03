@@ -13,19 +13,24 @@
 /* =========================
    นำเข้าฟอนต์ ARMBOX MOON Night
 ========================= */
+/* =========================
+   นำเข้าฟอนต์ ARMBOX MOON Night (มีขีดตามชื่อไฟล์)
+========================= */
 @font-face {
     font-family: 'ARMBOX MOON Night';
-    src: url('fonts/MOON Night DEMO.otf') format('opentype'); 
+    src: url('fonts/MOON-Night-DEMO.otf') format('opentype'); 
     font-weight: normal;
     font-style: normal;
 }
 
 body{
-    font-family:'ARMBOX MOON Night', 'Press Start 2P', cursive;
-    min-height:100vh;
-    overflow-x:hidden;
-    background:#75CFFF;
-    color:white;
+    /* ลำดับการแสดงผล: ถ้าเป็นภาษาไทยจะวิ่งไปหาฟอนต์ MOON Night ก่อน 
+       ถ้าเป็นภาษาอังกฤษหรือตัวเลข จะใช้ฟอนต์ Press Start 2P เดิม */
+    font-family: 'ARMBOX MOON Night', 'Press Start 2P', cursive;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: #75CFFF;
+    color: white;
 }
 
 /* ---------- SKY & CLOUDS ---------- */
