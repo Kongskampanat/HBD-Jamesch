@@ -1,21 +1,346 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🎂 Happy Birthday Jamesch</title>
 
-    <link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+font-family:'Press Start 2P',cursive;
+
+background:linear-gradient(#66c5ff,#bde9ff);
+
+overflow:hidden;
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+}
+
+/* Sky */
+
+.sky{
+
+position:absolute;
+
+width:100%;
+
+height:100%;
+
+overflow:hidden;
+
+}
+
+/* Clouds */
+
+.cloud{
+
+position:absolute;
+
+background:white;
+
+width:180px;
+
+height:60px;
+
+border-radius:50px;
+
+opacity:.9;
+
+animation:moveCloud 40s linear infinite;
+
+}
+
+.cloud:before{
+
+content:"";
+
+position:absolute;
+
+width:80px;
+
+height:80px;
+
+background:white;
+
+left:20px;
+
+top:-35px;
+
+border-radius:50%;
+
+}
+
+.cloud:after{
+
+content:"";
+
+position:absolute;
+
+width:90px;
+
+height:90px;
+
+background:white;
+
+right:20px;
+
+top:-45px;
+
+border-radius:50%;
+
+}
+
+.c1{
+
+top:80px;
+
+left:-200px;
+
+}
+
+.c2{
+
+top:180px;
+
+left:-500px;
+
+animation-duration:60s;
+
+}
+
+@keyframes moveCloud{
+
+100%{
+
+transform:translateX(170vw);
+
+}
+
+}
+
+/* Ground */
+
+.ground{
+
+position:absolute;
+
+bottom:0;
+
+width:100%;
+
+height:180px;
+
+background:#4CAF50;
+
+border-top:10px solid #2E7D32;
+
+}
+
+/* Dirt */
+
+.ground:after{
+
+content:"";
+
+position:absolute;
+
+bottom:0;
+
+width:100%;
+
+height:90px;
+
+background:#8D6E63;
+
+}
+
+/* Card */
+
+.card{
+
+position:relative;
+
+z-index:10;
+
+background:rgba(255,255,255,.95);
+
+padding:50px;
+
+border:8px solid #222;
+
+box-shadow:12px 12px #000;
+
+text-align:center;
+
+max-width:700px;
+
+}
+
+h1{
+
+font-size:34px;
+
+color:#2E7D32;
+
+margin-bottom:20px;
+
+line-height:1.5;
+
+}
+
+h2{
+
+font-size:18px;
+
+margin-bottom:35px;
+
+color:#444;
+
+}
+
+p{
+
+font-size:13px;
+
+line-height:2;
+
+margin-bottom:40px;
+
+color:#555;
+
+}
+
+button{
+
+font-family:'Press Start 2P',cursive;
+
+padding:18px 35px;
+
+font-size:14px;
+
+background:#43A047;
+
+color:white;
+
+border:4px solid #1B5E20;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+button:hover{
+
+background:#66BB6A;
+
+transform:scale(1.08);
+
+}
+
+.footer{
+
+margin-top:35px;
+
+font-size:10px;
+
+color:#777;
+
+}
+
+</style>
+
 </head>
+
 <body>
 
-    <h1>🎂 Happy Birthday 🎉</h1>
+<div class="sky">
 
-    <p>Welcome to my Minecraft Birthday Website!</p>
+<div class="cloud c1"></div>
 
-    <button>Enter The World</button>
+<div class="cloud c2"></div>
 
-    <script src="script.js"></script>
+</div>
+
+<div class="card">
+
+<h1>🎂<br>Happy Birthday<br>Jamesch</h1>
+
+<h2>3 August 2026</h2>
+
+<p>
+
+Every great adventure begins with one block.
+
+Today is not just another day.
+
+Today is your special day.
+
+I built this little Minecraft world just for you.
+
+I hope it brings you a smile,
+
+just like you have brought happiness to others.
+
+May this year be filled with health,
+
+joy,
+
+success,
+
+and endless adventures.
+
+Happy Birthday! ❤️
+
+</p>
+
+<button onclick="enterWorld()">
+
+ENTER THE WORLD
+
+</button>
+
+<div class="footer">
+
+Minecraft Birthday Edition
+
+</div>
+
+</div>
+
+<div class="ground"></div>
+
+<script>
+
+function enterWorld(){
+
+alert(
+
+"Welcome to your Birthday Adventure, Jamesch! 🎉"
+
+);
+
+}
+
+</script>
 
 </body>
+
 </html>
