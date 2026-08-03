@@ -2,49 +2,36 @@
 // HBD Jamesch Minecraft Birthday
 // ===============================
 
-
-function enterWorld(){
-
+function enterWorld() {
     console.log("Enter World Clicked");
 
-
     const home = document.getElementById("home");
-
     const world = document.getElementById("birthday-world");
 
-
-    if(home){
-
+    if (home) {
         home.style.display = "none";
-
     }
 
-
-    if(world){
-
+    if (world) {
         world.style.display = "block";
-
         world.classList.add("show");
-        const music =
-document.getElementById("minecraftMusic");
-        document.querySelector(".minecraft-scene")
-.style.display="block";
+        const music = document.getElementById("minecraftMusic");
+        document.querySelector(".minecraft-scene").style.display = "block";
 
-
-if(music){
-
-music.play();
-
-}
-
+        if (music) {
+            music.play();
+        }
     }
-
-
 }
-function openGift() {
 
+// ===============================
+// Gift Open Control
+// ===============================
+
+function openGift() {
     const gift = document.querySelector(".gift");
 
+    // ทำให้กล่องเปิด
     if (gift) {
         gift.classList.add("open");
     }
@@ -53,7 +40,6 @@ function openGift() {
     createFireworks();
 
     setTimeout(() => {
-
         alert(
             "🎁 Happy Birthday Jamesch ❤️\n\n" +
             "Welcome to your Minecraft Adventure World! ⛏️\n\n" +
@@ -61,227 +47,74 @@ function openGift() {
             "สุขสันต์วันเกิดคับพี่เจมส์ ขอได้มีความสวัสดีมงคล ประสบสุขงดงามแก่กาลทุกเมื่อนะคับ🎂✨🫂💗✨"
         );
 
-        // รีเซ็ตกล่องหลังปิด Popup
+        // รีเซ็ตกล่องหลังปิด Popup (ทำให้กดเปิดใหม่ได้)
         if (gift) {
             gift.classList.remove("open");
         }
-
     }, 800);
 }
 
-
-createNightSky();
-createFireworks();
-
-
-
-setTimeout(()=>{
-
-
-alert(
-
-"🎁 Happy Birthday Jamesch ❤️\n\n" +
-
-"Welcome to your Minecraft Adventure World! ⛏️\n\n" +
-
-"แฮปปี้เบิดเดย์ครับผม มีความสุขเยอะๆ อย่าหายบ่อยถึงเพื่อนจะหายบ่อย หยอกๆ คิดถึงเสมอ อยากเจอด้วย สุขภาพแข็งแรงครับ,\n" +
-
-" สุขสันต์วันเกิดคับพี่เจมส์ ขอได้มีความสวัสดีมงคล ประสบสุขงดงามแก่กาลทุกเมื่อนะคับ🎂✨🫂💗 ✨"
-
-);
-
-
-},800);
-
-
-
-}
 // ===============================
 // Firework Effect
 // ===============================
 
-function createFireworks(){
-
-
-    for(let i = 0; i < 30; i++){
-
-
+function createFireworks() {
+    for (let i = 0; i < 30; i++) {
         let firework = document.createElement("div");
-
-
         firework.className = "firework";
-
-
-        firework.style.left =
-        Math.random()*100 + "vw";
-
-
-        firework.style.top =
-        Math.random()*60 + "vh";
-
-
+        
+        firework.style.left = Math.random() * 100 + "vw";
+        firework.style.top = Math.random() * 60 + "vh";
+        
         document.body.appendChild(firework);
 
-
-
-        setTimeout(()=>{
-
-
+        // ลบพลุออกเมื่อแสดงผลเสร็จ จะได้ไม่รกหน้าจอ
+        setTimeout(() => {
             firework.remove();
+        }, 1500);
+    }
+}
 
-
-        },1500);
-
-        // ===============================
+// ===============================
 // Music Control
 // ===============================
 
+function toggleMusic() {
+    const music = document.getElementById("minecraftMusic");
 
-function toggleMusic(){
+    if (!music) return;
 
-
-const music =
-document.getElementById("minecraftMusic");
-
-
-
-if(!music) return;
-
-
-
-if(music.paused){
-
-
-music.play();
-
-
-}else{
-
-
-music.pause();
-
-
-}
-
-
-}
-
-
+    if (music.paused) {
+        music.play();
+    } else {
+        music.pause();
     }
-
-
 }
+
 // ===============================
 // Minecraft Night Sky
 // ===============================
 
-
-function createNightSky(){
-
-
-document.body.classList.add("night");
-
-
-
-// Moon
-
-let moon =
-document.createElement("div");
-
-
-moon.className="moon";
-
-
-document.body.appendChild(moon);
-
-
-
-
-// Stars
-
-for(let i=0;i<80;i++){
-
-
-let star =
-document.createElement("div");
-
-
-star.className="star";
-
-
-star.style.left =
-Math.random()*100+"vw";
-
-
-star.style.top =
-Math.random()*60+"vh";
-
-
-star.style.animationDelay =
-Math.random()*2+"s";
-
-
-document.body.appendChild(star);
-
-
-}
-
-
-}
-// ===============================
-// Minecraft Night Sky
-// ===============================
-
-
-function createNightSky(){
-
-
-document.body.classList.add("night");
-
-
-
-// Moon
-
-let moon =
-document.createElement("div");
-
-
-moon.className="moon";
-
-
-document.body.appendChild(moon);
-
-
-
-
-// Stars
-
-for(let i=0;i<80;i++){
-
-
-let star =
-document.createElement("div");
-
-
-star.className="star";
-
-
-star.style.left =
-Math.random()*100+"vw";
-
-
-star.style.top =
-Math.random()*60+"vh";
-
-
-star.style.animationDelay =
-Math.random()*2+"s";
-
-
-document.body.appendChild(star);
-
-
-}
-
-
+function createNightSky() {
+    // เช็คว่าถ้ามีฉากกลางคืนอยู่แล้ว (กดกล่องซ้ำ) ไม่ต้องสร้างดวงจันทร์และดาวเพิ่ม
+    if (document.body.classList.contains("night")) return;
+
+    document.body.classList.add("night");
+
+    // Moon
+    let moon = document.createElement("div");
+    moon.className = "moon";
+    document.body.appendChild(moon);
+
+    // Stars
+    for (let i = 0; i < 80; i++) {
+        let star = document.createElement("div");
+        star.className = "star";
+        
+        star.style.left = Math.random() * 100 + "vw";
+        star.style.top = Math.random() * 60 + "vh";
+        star.style.animationDelay = Math.random() * 2 + "s";
+        
+        document.body.appendChild(star);
+    }
 }
