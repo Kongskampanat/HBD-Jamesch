@@ -134,21 +134,21 @@ body{
     50%{ transform:translateY(-15px); }
 }
 .title{
-    font-size:35px;
-    line-height:1.7;
+    font-size:46px;   /* เดิม 35px */
+    line-height:1.5;
     color:#43A047;
-    text-shadow: 4px 4px #222;
+    text-shadow:4px 4px #222;
 }
 .subtitle{
     margin-top:20px;
-    font-size:18px;
+    font-size:24px;   /* เดิม 18px */
     color:#FBC02D;
-    text-shadow: 3px 3px #333;
+    text-shadow:3px 3px #333;
 }
 .message{
     margin-top:35px;
-    font-size:18px;
-    line-height:2.2;
+    font-size:22px;   /* เดิม 18px */
+    line-height:2;
     color:#555;
 }
 
@@ -156,12 +156,12 @@ body{
 .minecraft-btn{
     margin-top:35px;
     padding:20px 35px;
-    font-family: 'Press Start 2P', cursive;
-    font-size:14px;
+    font-family:'ARMBOX MOON Night','Press Start 2P',cursive;
+    font-size:18px;      /* เดิม 14px */
     background:#4CAF50;
     color:white;
-    border: 5px solid #1B5E20;
-    box-shadow: 8px 8px #222;
+    border:5px solid #1B5E20;
+    box-shadow:8px 8px #222;
     cursor:pointer;
     transition:.2s;
 }
@@ -176,8 +176,8 @@ body{
 .sound-btn{
     margin-top:20px;
     padding:12px 20px;
-    font-family:'Press Start 2P', cursive;
-    font-size:10px;
+    font-family:'ARMBOX MOON Night','Press Start 2P',cursive;
+    font-size:14px;      /* เดิม 10px */
     background:#2196F3;
     color:white;
     border:5px solid #0D47A1;
@@ -477,14 +477,14 @@ body.night{
 /* หัวข้อและข้อความ */
 .achieve-title {
     color: #FFFF55; 
-    font-size: 18px;
+    font-size: 24px;
     margin-bottom: 10px;
     text-shadow: 2px 2px 0 #3f3f15;
     font-family: 'ARMBOX MOON Night', 'Press Start 2P', cursive;
 }
 .achieve-desc {
     color: #FFFFFF;
-    font-size: 14px;
+    font-size: 18px;
     margin-bottom: 20px;
     font-family: 'ARMBOX MOON Night', 'Press Start 2P', cursive;
 }
@@ -492,7 +492,7 @@ body.night{
 /* ⚠️ แก้ปัญหาข้อความไทยตกลงมาเป็นบรรทัดละคำ */
 .achieve-msg {
     color: #AAAAAA;
-    font-size: 13px; /* ปรับขนาดให้พอดี ไม่ยาวเป็นพรืด */
+    font-size: 18px; /* ปรับขนาดให้พอดี ไม่ยาวเป็นพรืด */
     line-height: 2.2;
     margin-bottom: 30px;
     font-family: 'ARMBOX MOON Night', 'Press Start 2P', cursive;
@@ -502,8 +502,10 @@ body.night{
 
 .close-btn {
     margin-top: 0;
-    padding: 15px 30px;
+    font-size:18px;
+    padding:16px 30px;
     font-family: 'ARMBOX MOON Night', 'Press Start 2P', cursive;
+
 }
 
 /* เค้ก CSS ด้านบนการ์ด */
