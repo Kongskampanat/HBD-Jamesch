@@ -15,7 +15,7 @@
 ========================= */
 @font-face {
     font-family: 'ARMBOX MOON Night';
-    src: url('fonts/MOON-Night-DEMO.otf') format('opentype'); 
+    src: url('fonts/MOON Night DEMO.otf') format('opentype'); 
     font-weight: normal;
     font-style: normal;
 }
@@ -147,7 +147,7 @@ body{
 }
 .message{
     margin-top:35px;
-    font-size:18px;
+    font-size:14px;
     line-height:2.2;
     color:#555;
 }
@@ -156,7 +156,7 @@ body{
 .minecraft-btn{
     margin-top:35px;
     padding:20px 35px;
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'ARMBOX MOON Night', 'Press Start 2P', cursive;
     font-size:14px;
     background:#4CAF50;
     color:white;
@@ -176,8 +176,8 @@ body{
 .sound-btn{
     margin-top:20px;
     padding:12px 20px;
-    font-family:'Press Start 2P', cursive;
-    font-size:10px;
+    font-family:'ARMBOX MOON Night', 'Press Start 2P', cursive;
+    font-size:12px;
     background:#2196F3;
     color:white;
     border:5px solid #0D47A1;
@@ -188,6 +188,7 @@ body{
 /* ---------- IMAGE GALLERY ---------- */
 .gallery-section{
     margin-top:50px;
+    padding-bottom: 100px;
 }
 .gallery{
     display:flex;
@@ -214,8 +215,9 @@ body{
 }
 .photo-card p{
     margin-top:15px;
-    font-size:10px;
+    font-size:11px;
     color:white;
+    font-family: 'ARMBOX MOON Night', 'Press Start 2P', cursive;
 }
 
 /* ---------- HIDDEN WORLD (หลังกดเข้าเกม) ---------- */
@@ -277,6 +279,7 @@ body.night{
     text-align:center;
     color:white;
     box-shadow: 8px 8px #222;
+    font-family: 'ARMBOX MOON Night', 'Press Start 2P', cursive;
 }
 .tree{
     position:absolute;
@@ -380,8 +383,9 @@ body.night{
 }
 .gift-text{
     margin-top:20px;
-    font-size:12px;
+    font-size:13px;
     color:#333;
+    font-family: 'ARMBOX MOON Night', 'Press Start 2P', cursive;
 }
 
 /* โบว์บนกล่อง */
@@ -430,9 +434,6 @@ body.night{
 /* =========================
    ACHIEVEMENT MODAL (Popup)
 ========================= */
-/* =========================
-   ACHIEVEMENT MODAL (Popup ปรับใหม่ให้สวยเป๊ะ)
-========================= */
 .modal-overlay {
     display: none;
     position: fixed;
@@ -442,21 +443,21 @@ body.night{
     z-index: 2000;
     justify-content: center;
     align-items: center;
+    padding: 20px;
 }
 .modal-overlay.show {
     display: flex;
     animation: fadeIn 0.5s ease;
 }
 
-/* จัดกึ่งกลางจอแบบยืดหยุ่น */
+/* จัดกึ่งกลางจอรองรับรูปซ้ายขวาแบบไม่ทับซ้อน */
 .modal-content-wrapper {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-    max-width: 900px; /* ขยายกรอบรองรับรูปซ้ายขวา */
-    padding: 0 40px;
+    max-width: 920px;
 }
 
 /* ตัวการ์ด Achievement หลัก */
@@ -464,45 +465,46 @@ body.night{
     background: #212121;
     border: 4px solid #555555;
     outline: 4px solid #000000;
-    padding: 50px 30px 35px;
+    padding: 55px 35px 35px;
     text-align: center;
     position: relative;
     box-shadow: 15px 15px 0 rgba(0,0,0,0.6);
     z-index: 10;
     width: 100%;
-    max-width: 550px; /* ควบคุมความกว้างการ์ดให้อ่านง่ายกำลังดี */
+    max-width: 580px;
     margin: 0 auto;
 }
 
 /* หัวข้อและข้อความ */
 .achieve-title {
     color: #FFFF55; 
-    font-size: 18px;
-    margin-bottom: 10px;
+    font-size: 20px;
+    margin-bottom: 12px;
     text-shadow: 2px 2px 0 #3f3f15;
     font-family: 'ARMBOX MOON Night', 'Press Start 2P', cursive;
 }
 .achieve-desc {
     color: #FFFFFF;
-    font-size: 14px;
-    margin-bottom: 20px;
+    font-size: 15px;
+    margin-bottom: 22px;
     font-family: 'ARMBOX MOON Night', 'Press Start 2P', cursive;
 }
 
-/* ⚠️ แก้ปัญหาข้อความไทยตกลงมาเป็นบรรทัดละคำ */
 .achieve-msg {
     color: #AAAAAA;
-    font-size: 13px; /* ปรับขนาดให้พอดี ไม่ยาวเป็นพรืด */
-    line-height: 2.2;
+    font-size: 14px;
+    line-height: 2.3;
     margin-bottom: 30px;
     font-family: 'ARMBOX MOON Night', 'Press Start 2P', cursive;
     text-align: center;
-    white-space: normal; /* บังคับให้ตัดคำตามความกว้างปกติ */
+    white-space: normal;
 }
 
+/* ปรับปุ่ม Continue ให้ตัวหนังสือใหญ่ชัดเจน ไม่เล็ก */
 .close-btn {
     margin-top: 0;
-    padding: 15px 30px;
+    padding: 18px 35px;
+    font-size: 14px;
     font-family: 'ARMBOX MOON Night', 'Press Start 2P', cursive;
 }
 
@@ -537,11 +539,11 @@ body.night{
 .cherry3 { right: 8px; }
 
 /* =========================
-   IMAGE NPCs (จัดตำแหน่งใหม่ให้อยู่ข้างการ์ดสวยๆ ไม่ทับซ้อน)
+   IMAGE NPCs (ขยายออกด้านข้างสวยๆ ไม่ทับการ์ด)
 ========================= */
 .img-npc {
     position: absolute;
-    height: 380px; /* กำหนดความสูงพอดีๆ ไม่ใหญ่เกินไป */
+    height: 380px;
     width: auto;
     bottom: -20px;
     z-index: 5;
@@ -549,78 +551,74 @@ body.night{
     filter: drop-shadow(8px 8px 0 rgba(0,0,0,0.6));
 }
 
-/* ล็อกตำแหน่งซ้ายและขวาให้อิงกับกล่อง Wrapper นอกการ์ด */
 .npc-left { 
-    left: 10px; 
+    left: -40px; 
 }
 .npc-right { 
-    right: 10px; 
-}
-
-/* 📱 สำหรับมือถือและจอเล็ก */
-@media (max-width: 768px) {
-    .modal-content-wrapper { padding: 0 10px; max-width: 100%; }
-    .achievement-card { padding: 45px 15px 25px; }
-    .achieve-msg { font-size: 11px; line-height: 2; }
-    
-    /* ในมือถือให้ซ่อนรูป NPC ข้างๆ ไปก่อน เพื่อป้องกันการบังตัวหนังสือของการ์ด */
-    .img-npc { display: none; }
+    right: -40px; 
 }
 
 /* =====================================
-   📱 MOBILE RESPONSIVE (รองรับทุกหน้าจอ)
+   📱 MOBILE RESPONSIVE (รองรับหน้าจอมือถือสมบูรณ์)
 ===================================== */
-/* แท็บเล็ต (iPad) */
-@media(max-width: 900px) {
-    .npc-left { left: -40px; }
-    .npc-right { right: -40px; }
+@media(max-width: 1024px) {
+    .npc-left { left: -10px; }
+    .npc-right { right: -10px; }
 }
 
-/* โทรศัพท์มือถือ */
 @media (max-width: 768px) {
-    /* ปรับขนาดหน้าแรก */
-    .card { width: 92%; padding: 30px 20px; border-width: 5px; }
+    /* หน้าแรก */
+    .card { width: 92%; padding: 25px 15px; border-width: 5px; }
     .title { font-size: 20px; }
-    .subtitle { font-size: 14px; }
+    .subtitle { font-size: 13px; }
     .message { font-size: 12px; line-height: 1.8; }
-    .minecraft-btn { padding: 15px 20px; font-size: 11px; width: 100%; margin-bottom: 10px; }
-    .sound-btn { padding: 12px 20px; font-size: 11px; width: 100%; }
+    .minecraft-btn { padding: 15px; font-size: 11px; width: 100%; margin-bottom: 10px; }
+    .sound-btn { padding: 12px; font-size: 11px; width: 100%; }
 
-    /* ย่อส่วนฉากหมู่บ้าน */
+    /* ฉากหมู่บ้าน */
     .minecraft-scene {
-        transform: scale(0.6);
+        transform: scale(0.55);
         transform-origin: bottom center;
-        height: 200px; 
-        margin-top: 10px;
+        height: 180px; 
+        margin-top: 5px;
     }
-    .welcome-sign { top: -20px; }
-    .ground { height: 100px; border-top-width: 8px; }
-    .ground::after { height: 40px; }
+    .welcome-sign { top: -25px; }
+    .ground { height: 90px; border-top-width: 6px; }
+    .ground::after { height: 35px; }
 
-    /* ปรับขนาดกล่องของขวัญ */
+    /* กล่องของขวัญ */
     .gift-container { margin-top: 10px; }
-    .gift { width: 100px; height: 85px; border-width: 6px; }
+    .gift { width: 95px; height: 80px; border-width: 5px; }
     .gift::before { width: 14px; }
     .gift::after { height: 14px; top: 40%; }
-    .bow { transform: translateX(-50%) scale(0.8); top: -22px; }
+    .bow { transform: translateX(-50%) scale(0.75); top: -20px; }
 
-    /* ปรับแกลลอรี่รูปภาพ */
-    .gallery { gap: 12px; }
-    .photo-card { padding: 8px; border-width: 5px; width: 45%; }
-    .photo-card img { width: 100%; height: 120px; border-width: 3px; }
-    .photo-card p { font-size: 9px; margin-top: 10px; }
+    /* แกลลอรี่ */
+    .gallery { gap: 10px; }
+    .photo-card { padding: 8px; border-width: 4px; width: 46%; }
+    .photo-card img { width: 100%; height: 110px; border-width: 2px; }
+    .photo-card p { font-size: 9px; margin-top: 8px; }
 
-    /* ปรับหน้าต่าง Popup Achievement */
-    .modal-content-wrapper { width: 95%; }
+    /* หน้าต่าง Achievement และ NPC บนมือถือ */
+    .modal-overlay { padding: 10px; }
     .achievement-card { 
-        padding: 50px 15px 25px; 
+        padding: 45px 15px 20px; 
         border-width: 3px;
         outline-width: 3px;
+        max-width: 100%;
     }
-    .achieve-title { font-size: 18px; }
-    .achieve-desc { font-size: 14px; margin-bottom: 20px; }
-    .achieve-msg { font-size: 18px; line-height: 1.8; margin-bottom: 25px; } /* ปรับขนาดฟอนต์บนมือถือให้พอดี */
-    .close-btn { width: 100%; padding: 15px; }
-    .css-cake { transform: translateX(-50%) scale(0.8); top: -25px; }
+    .achieve-title { font-size: 15px; }
+    .achieve-desc { font-size: 12px; margin-bottom: 15px; }
+    .achieve-msg { font-size: 11.5px; line-height: 1.9; margin-bottom: 20px; }
+    .close-btn { width: 100%; padding: 14px; font-size: 12px; }
+    .css-cake { transform: translateX(-50%) scale(0.75); top: -25px; }
 
+    /* ย่อขนาด NPC บนมือถือและวางไว้มุมข้างการ์ดสวยๆ ไม่บังข้อความ */
+    .img-npc {
+        height: 180px;
+        bottom: -10px;
+        z-index: 15;
+    }
+    .npc-left { left: -15px; }
+    .npc-right { right: -15px; }
 }
