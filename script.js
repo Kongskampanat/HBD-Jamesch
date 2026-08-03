@@ -25,6 +25,15 @@ function enterWorld(){
         world.style.display = "block";
 
         world.classList.add("show");
+        const music =
+document.getElementById("minecraftMusic");
+
+
+if(music){
+
+music.play();
+
+}
 
     }
 
@@ -104,6 +113,40 @@ function createFireworks(){
 
 
         },1500);
+
+        // ===============================
+// Music Control
+// ===============================
+
+
+function toggleMusic(){
+
+
+const music =
+document.getElementById("minecraftMusic");
+
+
+
+if(!music) return;
+
+
+
+if(music.paused){
+
+
+music.play();
+
+
+}else{
+
+
+music.pause();
+
+
+}
+
+
+}
 
 
     }
