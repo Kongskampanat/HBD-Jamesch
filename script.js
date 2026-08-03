@@ -27,6 +27,8 @@ function enterWorld(){
         world.classList.add("show");
         const music =
 document.getElementById("minecraftMusic");
+        document.querySelector(".minecraft-scene")
+.style.display="block";
 
 
 if(music){
