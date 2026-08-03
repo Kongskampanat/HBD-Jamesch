@@ -33,6 +33,10 @@ function enterWorld() {
 // Gift Open Control
 // ===============================
 
+// ===============================
+// Gift Open Control & Modal
+// ===============================
+
 function openGift() {
     const gift = document.querySelector(".gift");
 
@@ -43,18 +47,27 @@ function openGift() {
     createNightSky();
     createFireworks();
 
+    // แสดงหน้าต่าง Achievement แทน alert()
     setTimeout(() => {
-        alert(
-            "🎁 Happy Birthday Jamesch ❤️\n\n" +
-            "Welcome to your Minecraft Adventure World! ⛏️\n\n" +
-            "แฮปปี้เบิดเดย์ครับผม มีความสุขเยอะๆ อย่าหายบ่อยถึงเพื่อนจะหายบ่อย หยอกๆ คิดถึงเสมอ อยากเจอด้วย สุขภาพแข็งแรงครับ,\n" +
-            "สุขสันต์วันเกิดคับพี่เจมส์ ขอได้มีความสวัสดีมงคล ประสบสุขงดงามแก่กาลทุกเมื่อนะคับ🎂✨🫂💗✨"
-        );
-
-        if (gift) {
-            gift.classList.remove("open");
+        const modal = document.getElementById("achievement-modal");
+        if(modal) {
+            modal.classList.add("show");
         }
     }, 800);
+}
+
+// ฟังก์ชันสำหรับปิดหน้าต่าง Achievement
+function closeModal() {
+    const modal = document.getElementById("achievement-modal");
+    if(modal) {
+        modal.classList.remove("show");
+    }
+
+    // รีเซ็ตกล่องให้กลับมาปิด
+    const gift = document.querySelector(".gift");
+    if (gift) {
+        gift.classList.remove("open");
+    }
 }
 
 // ===============================
