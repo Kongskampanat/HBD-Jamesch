@@ -18,7 +18,7 @@
 @font-face {
     font-family: 'ARMBOX MOON Night';
     /* ระบุ Path ให้ชี้ไปที่โฟลเดอร์ fonts และชื่อไฟล์ตามภาพเป๊ะๆ */
-    src: url('fonts/MOON Night DEMO.otf') format('opentype'); 
+    src: url('fonts/MOON-Night-DEMO.otf') format('opentype'); 
     font-weight: normal;
     font-style: normal;
 }
