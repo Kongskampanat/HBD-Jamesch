@@ -553,10 +553,10 @@ body.night{
 
 /* ล็อกตำแหน่งซ้ายและขวาให้อิงกับกล่อง Wrapper นอกการ์ด */
 .npc-left { 
-    left: -120px; 
+    left: 40px; 
 }
 .npc-right { 
-    right: -120px; 
+    right: 40px; 
 }
 
 /* 📱 สำหรับมือถือและจอเล็ก */
