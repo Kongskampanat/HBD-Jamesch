@@ -1,662 +1,322 @@
-/* =================================
-   Minecraft Birthday Website
-   Jamesch Edition
-================================= */
+/* =====================================
+   HBD Jamesch - Minecraft Adventure
+   script.js
+===================================== */
 
 
-/* Reset */
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+/* ---------- ENTER WORLD ---------- */
+
+
+function enterWorld(){
+
+    const button =
+    document.querySelector(".minecraft-btn");
+
+
+    if(button){
+
+        button.innerHTML =
+        "LOADING WORLD...";
+
+        button.disabled=true;
+
+    }
+
+
+    setTimeout(()=>{
+
+
+        createFireworks();
+
+
+        showMessage(
+
+        "Welcome to Jamesch's Birthday World! 🎮"
+
+        );
+
+
+    },1500);
+
+
+
 }
 
 
-body{
 
-    font-family:'Press Start 2P', cursive;
+/* ---------- TYPE MESSAGE ---------- */
 
-    height:100vh;
 
-    overflow:hidden;
+function showMessage(text){
 
-    background:
-    linear-gradient(
-        to bottom,
-        #63c7ff 0%,
-        #bdeaff 70%,
-        #ffffff 100%
+
+    const box =
+    document.querySelector(".message");
+
+
+    if(!box) return;
+
+
+    box.innerHTML="";
+
+
+    let i=0;
+
+
+    let timer=setInterval(()=>{
+
+
+        box.innerHTML += text[i];
+
+
+        i++;
+
+
+        if(i>=text.length){
+
+            clearInterval(timer);
+
+        }
+
+
+    },80);
+
+
+
+}
+
+
+
+/* ---------- GIFT ---------- */
+
+
+function openGift(){
+
+
+    const gift =
+    document.querySelector(".gift");
+
+
+    if(!gift)return;
+
+
+
+    gift.style.transform=
+
+    "rotateX(180deg) scale(1.2)";
+
+
+    createFireworks();
+
+
+
+    setTimeout(()=>{
+
+
+        alert(
+
+        "🎁 A special gift for you, Jamesch ❤️"
+
+        );
+
+
+    },500);
+
+
+
+}
+
+
+
+
+
+/* ---------- FIREWORK ---------- */
+
+
+function createFireworks(){
+
+
+    for(let i=0;i<30;i++){
+
+
+        const firework =
+
+        document.createElement("div");
+
+
+        firework.className="firework";
+
+
+
+        firework.style.left=
+
+        Math.random()*100+"vw";
+
+
+        firework.style.top=
+
+        Math.random()*70+"vh";
+
+
+
+        firework.style.animationDelay=
+
+        Math.random()+"s";
+
+
+
+        document.body.appendChild(firework);
+
+
+
+        setTimeout(()=>{
+
+
+            firework.remove();
+
+
+        },1500);
+
+
+
+    }
+
+
+
+}
+
+
+
+
+
+/* ---------- BLOCK EFFECT ---------- */
+
+
+function createBlocks(){
+
+
+    for(let i=0;i<10;i++){
+
+
+        let block=
+
+        document.createElement("div");
+
+
+        block.className="block";
+
+
+
+        block.style.left=
+
+        Math.random()*100+"vw";
+
+
+        block.style.bottom=
+
+        Math.random()*200+"px";
+
+
+
+        document.body.appendChild(block);
+
+
+
+    }
+
+
+}
+
+
+
+/* ---------- CLICK SOUND ---------- */
+
+
+function clickSound(){
+
+
+    let sound=
+
+    new Audio(
+
+    "sounds/click.mp3"
+
     );
 
-    display:flex;
 
-    justify-content:center;
-
-    align-items:center;
-
-}
-
-
-/* =================================
-   SKY
-================================= */
-
-.sky{
-
-    position:absolute;
-
-    width:100%;
-
-    height:100%;
-
-    overflow:hidden;
-
-}
-
-
-/* Sun */
-
-.sun{
-
-    position:absolute;
-
-    width:120px;
-
-    height:120px;
-
-    background:#FFD54F;
-
-    border-radius:50%;
-
-    top:80px;
-
-    right:150px;
-
-    box-shadow:
-
-    0 0 40px #FFD54F;
-
-}
-
-
-/* =================================
-   CLOUD
-================================= */
-
-
-.cloud{
-
-    position:absolute;
-
-    background:white;
-
-    width:180px;
-
-    height:60px;
-
-    border-radius:50px;
-
-    opacity:.9;
-
-    animation:
-    cloudMove 45s linear infinite;
-
-}
-
-
-.cloud:before{
-
-    content:"";
-
-    position:absolute;
-
-    width:90px;
-
-    height:90px;
-
-    background:white;
-
-    border-radius:50%;
-
-    left:25px;
-
-    top:-45px;
-
-}
-
-
-
-.cloud:after{
-
-    content:"";
-
-    position:absolute;
-
-    width:80px;
-
-    height:80px;
-
-    background:white;
-
-    border-radius:50%;
-
-    right:25px;
-
-    top:-35px;
-
-}
-
-
-
-.cloud1{
-
-    top:100px;
-
-    left:-250px;
-
-}
-
-
-
-.cloud2{
-
-    top:250px;
-
-    left:-500px;
-
-    animation-duration:70s;
-
-}
-
-
-
-@keyframes cloudMove{
-
-
-from{
-
-transform:translateX(-300px);
-
-}
-
-
-to{
-
-transform:translateX(140vw);
-
-}
+    sound.play();
 
 
 }
 
 
 
-/* =================================
-   Minecraft Ground
-================================= */
+/* ---------- PAGE LOAD ---------- */
 
 
-.ground{
+window.onload=function(){
 
 
-position:absolute;
+    createBlocks();
 
-bottom:0;
 
-width:100%;
 
-height:200px;
+    const btn=
 
-background:#4CAF50;
+    document.querySelector(
 
-border-top:15px solid #2E7D32;
+    ".minecraft-btn"
 
+    );
 
-}
 
 
-.ground::before{
+    if(btn){
 
 
-content:"";
+        btn.addEventListener(
 
-position:absolute;
+        "click",
 
-top:30px;
+        ()=>{
 
-width:100%;
 
-height:170px;
+            clickSound();
 
-background:
 
-repeating-linear-gradient(
+            enterWorld();
 
-90deg,
 
-#4CAF50,
+        }
 
-#4CAF50 40px,
 
-#45A049 40px,
+        );
 
-#45A049 80px
 
-);
+    }
 
 
-}
 
+    const gift=
 
+    document.querySelector(".gift");
 
-.ground::after{
 
 
-content:"";
+    if(gift){
 
-position:absolute;
 
-bottom:0;
+        gift.addEventListener(
 
-width:100%;
+        "click",
 
-height:100px;
+        openGift
 
-background:#795548;
+        );
 
 
-}
+    }
 
 
-/* =================================
-   Main Card
-================================= */
 
-
-.card{
-
-
-position:relative;
-
-z-index:10;
-
-
-background:
-
-rgba(255,255,255,.95);
-
-
-padding:50px;
-
-
-width:700px;
-
-
-text-align:center;
-
-
-border:
-
-8px solid #222;
-
-
-box-shadow:
-
-15px 15px 0 #000;
-
-
-animation:
-
-float 3s ease-in-out infinite;
-
-
-}
-
-
-
-@keyframes float{
-
-
-0%,100%{
-
-transform:translateY(0);
-
-}
-
-
-50%{
-
-transform:translateY(-15px);
-
-}
-
-
-}
-
-
-
-/* =================================
-   Text
-================================= */
-
-
-h1{
-
-
-font-size:35px;
-
-
-line-height:1.6;
-
-
-color:#43A047;
-
-
-text-shadow:
-
-4px 4px #222;
-
-
-margin-bottom:25px;
-
-
-}
-
-
-
-h2{
-
-
-font-size:18px;
-
-
-color:#FBC02D;
-
-
-text-shadow:
-
-3px 3px #333;
-
-
-margin-bottom:30px;
-
-
-}
-
-
-
-p{
-
-
-font-size:13px;
-
-
-line-height:2.2;
-
-
-color:#333;
-
-
-margin-bottom:40px;
-
-
-}
-
-
-
-/* =================================
-   Button
-================================= */
-
-
-button{
-
-
-font-family:
-
-'Press Start 2P',
-cursive;
-
-
-font-size:14px;
-
-
-padding:
-
-20px 35px;
-
-
-background:#4CAF50;
-
-
-color:white;
-
-
-border:
-
-5px solid #1B5E20;
-
-
-cursor:pointer;
-
-
-box-shadow:
-
-8px 8px 0 #222;
-
-
-transition:.3s;
-
-
-}
-
-
-
-button:hover{
-
-
-background:#8BC34A;
-
-
-transform:
-
-translateY(-5px);
-
-
-box-shadow:
-
-8px 13px 0 #222;
-
-
-}
-
-
-
-button:active{
-
-
-transform:
-
-translateY(5px);
-
-
-box-shadow:
-
-3px 3px 0 #222;
-
-
-}
-
-
-
-/* =================================
-   Blocks Decoration
-================================= */
-
-
-.block{
-
-
-position:absolute;
-
-
-width:60px;
-
-height:60px;
-
-
-background:#8D6E63;
-
-
-border:
-
-5px solid #5D4037;
-
-
-}
-
-
-.block.grass{
-
-
-background:#4CAF50;
-
-
-border-color:#2E7D32;
-
-
-}
-
-
-
-/* =================================
-   Firework Effect
-================================= */
-
-
-.firework{
-
-
-position:absolute;
-
-
-width:10px;
-
-height:10px;
-
-
-background:#FFD700;
-
-
-border-radius:50%;
-
-
-animation:
-
-explode 1s infinite;
-
-
-}
-
-
-
-@keyframes explode{
-
-
-0%{
-
-
-transform:scale(1);
-
-
-opacity:1;
-
-
-}
-
-
-100%{
-
-
-transform:scale(10);
-
-
-opacity:0;
-
-
-}
-
-
-}
-
-
-
-/* =================================
-   Mobile Responsive
-================================= */
-
-
-@media(max-width:768px){
-
-
-
-.card{
-
-
-width:90%;
-
-
-padding:30px;
-
-
-}
-
-
-
-h1{
-
-
-font-size:22px;
-
-
-}
-
-
-h2{
-
-
-font-size:13px;
-
-
-}
-
-
-p{
-
-
-font-size:10px;
-
-
-}
-
-
-
-button{
-
-
-font-size:10px;
-
-
-padding:15px;
-
-
-}
-
-
-
-}
-
-
-/* =================================
-   End
-================================= */
+};
