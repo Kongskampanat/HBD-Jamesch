@@ -7,14 +7,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>🎂 Happy Birthday James</title>
-
+<title>🎂 Happy Birthday Jamesch</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
-
 <link rel="stylesheet" href="style.css">
-
 
 </head>
 
@@ -24,21 +21,19 @@
 
 <div class="sky">
 
+    <div class="sun"></div>
 
-<div class="sun"></div>
+    <div class="cloud cloud1"></div>
 
-
-<div class="cloud cloud1"></div>
-
-<div class="cloud cloud2"></div>
-
+    <div class="cloud cloud2"></div>
 
 </div>
 
 
 
-<div class="world">
+<!-- หน้าแรก -->
 
+<div class="world" id="home">
 
 
 <div class="card">
@@ -57,7 +52,6 @@ Jamesch
 </h1>
 
 
-
 <h2 class="subtitle">
 
 3 August 2026
@@ -66,9 +60,7 @@ Jamesch
 
 
 
-
 <p class="message">
-
 
 Every great adventure begins with one block.
 
@@ -78,9 +70,7 @@ Today is your special day.
 
 <br><br>
 
-I created this Minecraft world
-
-especially for you.
+I created this Minecraft world especially for you.
 
 <br><br>
 
@@ -92,8 +82,8 @@ success and endless adventures.
 
 Happy Birthday ❤️
 
-
 </p>
+
 
 
 <button 
@@ -104,11 +94,55 @@ ENTER THE WORLD
 
 </button>
 
+
 </div>
-<!-- ปิดหน้าแรกตรงนี้ -->
 
 
-<section id="birthday-world" class="hidden-world">
+</div>
+
+
+
+
+
+<!-- โลก Minecraft หลังจากกดปุ่ม -->
+
+
+<div id="birthday-world" class="hidden-world">
+
+
+
+<h2 class="subtitle">
+
+🌎 Welcome To Jamesch World
+
+</h2>
+
+
+
+<!-- Gift -->
+
+<div class="gift-container">
+
+
+<div class="gift" onclick="openGift()">
+
+</div>
+
+
+<p class="gift-text">
+
+Click the gift 🎁
+
+</p>
+
+
+</div>
+
+
+
+
+<!-- Gallery -->
+
 
 <section class="gallery-section">
 
@@ -120,7 +154,9 @@ ENTER THE WORLD
 </h2>
 
 
+
 <div class="gallery">
+
 
 
 <div class="photo-card">
@@ -132,6 +168,7 @@ ENTER THE WORLD
 </div>
 
 
+
 <div class="photo-card">
 
 <img src="images/photo2.jpg">
@@ -139,6 +176,7 @@ ENTER THE WORLD
 <p>Adventure 2</p>
 
 </div>
+
 
 
 <div class="photo-card">
@@ -150,6 +188,7 @@ ENTER THE WORLD
 </div>
 
 
+
 <div class="photo-card">
 
 <img src="images/photo4.jpg">
@@ -159,42 +198,17 @@ ENTER THE WORLD
 </div>
 
 
+
 </div>
 
 
 </section>
 
-</section>
-
-<div class="gift-container">
-
-    <div class="gift" onclick="openGift()">
-
-    </div>
-
-
-    <p class="gift-text">
-        Click the gift 🎁
-    </p>
-
-</div>
-
-
-
-
-<div class="footer">
-
-Minecraft Birthday Edition
-
-</div>
-
 
 
 </div>
 
 
-
-</div>
 
 
 
@@ -202,11 +216,9 @@ Minecraft Birthday Edition
 
 
 
-
 <script src="script.js"></script>
 
 
 </body>
-
 
 </html>
