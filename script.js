@@ -92,40 +92,35 @@ function showMessage(text){
 
 function openGift(){
 
-
     const gift =
     document.querySelector(".gift");
 
 
-    if(!gift)return;
+    if(!gift) return;
 
+
+    gift.style.animation="none";
 
 
     gift.style.transform=
-
-    "rotateX(180deg) scale(1.2)";
+    "rotateX(180deg) scale(1.3)";
 
 
     createFireworks();
-
 
 
     setTimeout(()=>{
 
 
         alert(
-
-        "🎁 A special gift for you, Jamesch ❤️"
-
+        "🎁 Happy Birthday Jamesch ❤️\n\nYour special adventure begins now!"
         );
 
 
-    },500);
-
+    },700);
 
 
 }
-
 
 
 
