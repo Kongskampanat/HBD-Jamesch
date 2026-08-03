@@ -41,16 +41,32 @@ music.play();
 
 
 }
-function openGift(){
+function openGift() {
 
+    const gift = document.querySelector(".gift");
 
-const gift = document.querySelector(".gift");
+    if (gift) {
+        gift.classList.add("open");
+    }
 
+    createNightSky();
+    createFireworks();
 
-if(gift){
+    setTimeout(() => {
 
-    gift.classList.add("open");
+        alert(
+            "🎁 Happy Birthday Jamesch ❤️\n\n" +
+            "Welcome to your Minecraft Adventure World! ⛏️\n\n" +
+            "แฮปปี้เบิดเดย์ครับผม มีความสุขเยอะๆ อย่าหายบ่อยถึงเพื่อนจะหายบ่อย หยอกๆ คิดถึงเสมอ อยากเจอด้วย สุขภาพแข็งแรงครับ,\n" +
+            "สุขสันต์วันเกิดคับพี่เจมส์ ขอได้มีความสวัสดีมงคล ประสบสุขงดงามแก่กาลทุกเมื่อนะคับ🎂✨🫂💗✨"
+        );
 
+        // รีเซ็ตกล่องหลังปิด Popup
+        if (gift) {
+            gift.classList.remove("open");
+        }
+
+    }, 800);
 }
 
 
