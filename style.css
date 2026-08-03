@@ -565,11 +565,9 @@ rotate(3deg);
 
 /* ---------- FIREWORK ---------- */
 
-
 .firework{
 
-
-position:absolute;
+position:fixed;
 
 width:15px;
 
@@ -579,15 +577,15 @@ background:#FFD700;
 
 border-radius:50%;
 
-animation:boom 1s infinite;
+animation:boom 1s;
 
+z-index:999;
 
 }
 
 
 
 @keyframes boom{
-
 
 from{
 
@@ -606,11 +604,7 @@ opacity:0;
 
 }
 
-
 }
-
-
-
 
 /* ---------- MOBILE ---------- */
 
