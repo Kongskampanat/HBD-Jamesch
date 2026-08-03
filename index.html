@@ -185,16 +185,12 @@ JAMESCH WORLD
 
 
 <!-- Gift -->
+<!-- Gift -->
 <div class="gift-container">
-
-<div class="gift" onclick="openGift()">
-    <div class="bow"></div> <!-- 🎀 ต้องเพิ่มบรรทัดนี้เข้าไปข้างในนี้ครับ -->
-</div>
-
-<p class="gift-text">
-Click the gift 🎁
-</p>
-
+    <div class="gift" onclick="openGift()">
+        <div class="bow"></div>
+    </div>
+    <p class="gift-text">Click the gift 🎁</p>
 </div>
 
 <!-- =========================
@@ -203,13 +199,23 @@ Click the gift 🎁
 <div id="achievement-modal" class="modal-overlay">
     <div class="modal-content-wrapper">
         
-        <!-- รูป NPC ด้านซ้าย (เปลี่ยน path ไฟล์รูปตรง src) -->
-        <img src="images/npc-left.png" alt="NPC 1" class="npc-img npc-left">
+        <!-- NPC ซ้าย (Creeper CSS ล้วน) -->
+        <div class="css-npc npc-left creeper">
+            <div class="head"><div class="face"></div></div>
+            <div class="body"></div>
+            <div class="legs"></div>
+        </div>
 
         <!-- ตัวการ์ด Achievement -->
         <div class="achievement-card">
-            <!-- รูปเค้กตรงกลาง (เปลี่ยน path ไฟล์รูปตรง src) -->
-            <img src="images/cake.png" alt="Cake" class="cake-icon">
+            
+            <!-- เค้ก (CSS ล้วน) -->
+            <div class="css-cake">
+                <div class="icing"></div>
+                <div class="cherry cherry1"></div>
+                <div class="cherry cherry2"></div>
+                <div class="cherry cherry3"></div>
+            </div>
             
             <h3 class="achieve-title">Achievement Made!</h3>
             <p class="achieve-desc">Happy Birthday Jamesch ❤️</p>
@@ -224,8 +230,12 @@ Click the gift 🎁
             <button class="minecraft-btn close-btn" onclick="closeModal()">Continue</button>
         </div>
 
-        <!-- รูป NPC ด้านขวา (เปลี่ยน path ไฟล์รูปตรง src) -->
-        <img src="images/npc-right.png" alt="NPC 2" class="npc-img npc-right">
+        <!-- NPC ขวา (Steve CSS ล้วน) -->
+        <div class="css-npc npc-right steve">
+            <div class="head"><div class="face"></div></div>
+            <div class="body"></div>
+            <div class="legs"></div>
+        </div>
 
     </div>
 </div>
