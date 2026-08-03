@@ -1,6 +1,6 @@
 /* =====================================
    HBD Jamesch - Minecraft Birthday Theme
-   style.css (Global Large Font Edition)
+   style.css
 ===================================== */
 
 /* ---------- RESET ---------- */
@@ -13,9 +13,6 @@
 /* =========================
    นำเข้าฟอนต์ ARMBOX MOON Night
 ========================= */
-/* =========================
-   นำเข้าฟอนต์ ARMBOX MOON Night (มีขีดตามชื่อไฟล์)
-========================= */
 @font-face {
     font-family: 'ARMBOX MOON Night';
     src: url('fonts/MOON-Night-DEMO.otf') format('opentype'); 
@@ -24,13 +21,11 @@
 }
 
 body{
-    /* ลำดับการแสดงผล: ถ้าเป็นภาษาไทยจะวิ่งไปหาฟอนต์ MOON Night ก่อน 
-       ถ้าเป็นภาษาอังกฤษหรือตัวเลข จะใช้ฟอนต์ Press Start 2P เดิม */
-    font-family: 'ARMBOX MOON Night', 'Press Start 2P', cursive;
-    min-height: 100vh;
-    overflow-x: hidden;
-    background: #75CFFF;
-    color: white;
+    font-family:'Press Start 2P', cursive;
+    min-height:100vh;
+    overflow-x:hidden;
+    background:#75CFFF;
+    color:white;
 }
 
 /* ---------- SKY & CLOUDS ---------- */
@@ -82,8 +77,16 @@ body{
     right:20px;
     top:-45px;
 }
-.cloud1{ top:100px; left:-250px; animation-duration:45s; }
-.cloud2{ top:250px; left:-300px; animation-duration:70s; }
+.cloud1{
+    top:100px;
+    left:-250px;
+    animation-duration:45s;
+}
+.cloud2{
+    top:250px;
+    left:-300px;
+    animation-duration:70s;
+}
 @keyframes cloudMove{
     from{ transform:translateX(-300px); }
     to{ transform:translateX(140vw); }
@@ -115,12 +118,12 @@ body{
     background:#795548;
 }
 
-/* ---------- CARD (หน้าแรก - ขยายฟอนต์ใหญ่) ---------- */
+/* ---------- CARD (หน้าแรก) ---------- */
 .card{
     background:white;
     color:#333;
-    width:750px;
-    padding:50px;
+    width:700px;
+    padding:45px;
     text-align:center;
     border:8px solid #222;
     box-shadow: 15px 15px 0 #000;
@@ -131,30 +134,30 @@ body{
     50%{ transform:translateY(-15px); }
 }
 .title{
-    font-size:42px; /* ขยายใหญ่สะใจ */
+    font-size:35px;
     line-height:1.7;
     color:#43A047;
     text-shadow: 4px 4px #222;
 }
 .subtitle{
     margin-top:20px;
-    font-size:22px; /* ขยายใหญ่ขึ้น */
+    font-size:18px;
     color:#FBC02D;
     text-shadow: 3px 3px #333;
 }
 .message{
     margin-top:35px;
-    font-size:18px; /* ขยายข้อความหน้าแรกให้อ่านง่ายสุดๆ */
-    line-height:2.4;
+    font-size:18px;
+    line-height:2.2;
     color:#555;
 }
 
-/* ---------- BUTTONS (ขยายปุ่มและตัวหนังสือในปุ่ม) ---------- */
+/* ---------- BUTTONS ---------- */
 .minecraft-btn{
     margin-top:35px;
-    padding:22px 40px;
-    font-family: 'ARMBOX MOON Night', 'Press Start 2P', cursive;
-    font-size:18px; /* ตัวหนังสือในปุ่มใหญ่ชัดเจน */
+    padding:20px 35px;
+    font-family: 'Press Start 2P', cursive;
+    font-size:14px;
     background:#4CAF50;
     color:white;
     border: 5px solid #1B5E20;
@@ -172,9 +175,9 @@ body{
 }
 .sound-btn{
     margin-top:20px;
-    padding:16px 28px;
-    font-family:'ARMBOX MOON Night', 'Press Start 2P', cursive;
-    font-size:16px; /* ขยายปุ่มเสียง */
+    padding:12px 20px;
+    font-family:'Press Start 2P', cursive;
+    font-size:10px;
     background:#2196F3;
     color:white;
     border:5px solid #0D47A1;
@@ -185,7 +188,6 @@ body{
 /* ---------- IMAGE GALLERY ---------- */
 .gallery-section{
     margin-top:50px;
-    padding-bottom: 100px;
 }
 .gallery{
     display:flex;
@@ -212,34 +214,50 @@ body{
 }
 .photo-card p{
     margin-top:15px;
-    font-size:14px; /* ขยายชื่อใต้รูป */
+    font-size:10px;
     color:white;
 }
 
-/* ---------- HIDDEN WORLD ---------- */
-.hidden-world{ display:none; }
-.hidden-world.show{ display:block; animation:fadeIn 1.5s ease; }
+/* ---------- HIDDEN WORLD (หลังกดเข้าเกม) ---------- */
+.hidden-world{
+    display:none;
+}
+.hidden-world.show{
+    display:block;
+    animation:fadeIn 1.5s ease;
+}
 @keyframes fadeIn{
     from{ opacity:0; transform:translateY(40px); }
     to{ opacity:1; transform:translateY(0); }
 }
-body.night{ background:#101840; }
+body.night{
+    background:#101840;
+}
 .moon{
     position:fixed;
-    top:70px; right:15%;
-    width:120px; height:120px;
-    background:#fff3b0; border-radius:50%;
+    top:70px;
+    right:15%;
+    width:120px;
+    height:120px;
+    background:#fff3b0;
+    border-radius:50%;
     box-shadow: 0 0 50px #fff3b0;
     z-index:-2;
 }
 .star{
-    position:fixed; width:5px; height:5px;
-    background:white; border-radius:50%;
+    position:fixed;
+    width:5px;
+    height:5px;
+    background:white;
+    border-radius:50%;
     box-shadow: 0 0 10px white;
     animation:twinkle 2s infinite alternate;
     z-index:-2;
 }
-@keyframes twinkle{ from{ opacity:.3; } to{ opacity:1; } }
+@keyframes twinkle{
+    from{ opacity:.3; }
+    to{ opacity:1; }
+}
 
 /* ---------- MINECRAFT VILLAGE SCENE ---------- */
 .minecraft-scene{
@@ -249,170 +267,360 @@ body.night{ background:#101840; }
 }
 .welcome-sign{
     position:absolute;
-    top:20px; left:50%;
+    top:20px;
+    left:50%;
     transform:translateX(-50%);
     background:#8B5A2B;
     border: 8px solid #4E342E;
     padding:20px;
-    font-size:18px; /* ขยายป้ายต้อนรับ */
-    text-align:center; color:white;
+    font-size:14px;
+    text-align:center;
+    color:white;
     box-shadow: 8px 8px #222;
 }
-.tree{ position:absolute; bottom:40px; }
+.tree{
+    position:absolute;
+    bottom:40px;
+}
 .tree1{ left:15%; }
 .tree2{ right:15%; }
 .trunk{
-    width:35px; height:120px;
-    background:#795548; margin:auto;
+    width:35px;
+    height:120px;
+    background:#795548;
+    margin:auto;
     border: 5px solid #4E342E;
 }
 .leaves{
-    width:120px; height:120px;
-    background:#388E3C; border: 8px solid #1B5E20;
-    border-radius:20px; margin:auto;
+    width:120px;
+    height:120px;
+    background:#388E3C;
+    border: 8px solid #1B5E20;
+    border-radius:20px;
+    margin:auto;
 }
 .house{
-    position:absolute; bottom:40px; left:50%;
+    position:absolute;
+    bottom:40px;
+    left:50%;
     transform:translateX(-50%);
 }
-.wall{ width:180px; height:120px; background:#D7CCC8; border: 8px solid #5D4037; }
-.roof{ width:220px; height:50px; background:#B71C1C; border: 8px solid #4E342E; transform: translateX(-20px) rotate(0deg); }
-.door{ width:40px; height:70px; background:#5D4037; position:absolute; bottom:0; left:70px; border: 5px solid #3E2723; }
+.wall{
+    width:180px;
+    height:120px;
+    background:#D7CCC8;
+    border: 8px solid #5D4037;
+}
+.roof{
+    width:220px;
+    height:50px;
+    background:#B71C1C;
+    border: 8px solid #4E342E;
+    transform: translateX(-20px) rotate(0deg);
+}
+.door{
+    width:40px;
+    height:70px;
+    background:#5D4037;
+    position:absolute;
+    bottom:0;
+    left:70px;
+    border: 5px solid #3E2723;
+}
 
 /* ---------- GIFT BOX ---------- */
-.gift-container{ margin-top:40px; text-align:center; }
-.gift{
-    width:140px; height:120px;
-    background:#d32f2f; border:8px solid #7f0000;
-    position:relative; margin:auto; cursor:pointer;
-    box-shadow: 10px 10px 0 #222, 0 0 30px rgba(255, 215, 0, 0.4);
-    animation:giftFloat 2s infinite; transition:0.8s;
+.gift-container{
+    margin-top:40px;
+    text-align:center;
 }
-.gift:hover{ box-shadow: 15px 15px 0 #222, 0 0 45px rgba(255, 215, 0, 0.7); }
-.gift::before{ content:""; position:absolute; left:50%; transform:translateX(-50%); width:20px; height:100%; background:#ffd700; }
-.gift::after{ content:""; position:absolute; top:45%; left:0; width:100%; height:20px; background:#ffd700; }
-@keyframes giftFloat{ 0%,100%{ transform:translateY(0); } 50%{ transform:translateY(-15px); } }
-.gift.open{ animation:none; transform: rotateX(70deg) translateY(-20px); box-shadow: 0 0 40px #ffd700; }
-.gift.open:after{ box-shadow: 0 -80px 40px 20px #fff176; }
-.gift-text{ margin-top:20px; font-size:16px; color:#333; } /* ขยายตัวหนังสือใต้กล่องของขวัญ */
+.gift{
+    width:140px;
+    height:120px;
+    background:#d32f2f;
+    border:8px solid #7f0000;
+    position:relative;
+    margin:auto;
+    cursor:pointer;
+    box-shadow: 10px 10px 0 #222, 0 0 30px rgba(255, 215, 0, 0.4);
+    animation:giftFloat 2s infinite;
+    transition:0.8s;
+}
+.gift:hover{
+    box-shadow: 15px 15px 0 #222, 0 0 45px rgba(255, 215, 0, 0.7);
+}
+.gift::before{
+    content:"";
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    width:20px;
+    height:100%;
+    background:#ffd700;
+}
+.gift::after{
+    content:"";
+    position:absolute;
+    top:45%;
+    left:0;
+    width:100%;
+    height:20px;
+    background:#ffd700;
+}
+@keyframes giftFloat{
+    0%,100%{ transform:translateY(0); }
+    50%{ transform:translateY(-15px); }
+}
+.gift.open{
+    animation:none;
+    transform: rotateX(70deg) translateY(-20px);
+    box-shadow: 0 0 40px #ffd700;
+}
+.gift.open:after{
+    box-shadow: 0 -80px 40px 20px #fff176;
+}
+.gift-text{
+    margin-top:20px;
+    font-size:12px;
+    color:#333;
+}
 
-/* โบว์ */
+/* โบว์บนกล่อง */
 .bow {
-    position: absolute; top: -25px; left: 50%;
-    transform: translateX(-50%); width: 24px; height: 24px;
-    background: #ffd700; border: 4px solid #b8860b; z-index: 5;
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 24px;
+    height: 24px;
+    background: #ffd700;
+    border: 4px solid #b8860b;
+    z-index: 5;
 }
 .bow::before, .bow::after {
-    content: ""; position: absolute; top: -2px; width: 35px; height: 25px;
-    background: #ffd700; border: 4px solid #b8860b;
+    content: "";
+    position: absolute;
+    top: -2px;
+    width: 35px;
+    height: 25px;
+    background: #ffd700;
+    border: 4px solid #b8860b;
 }
 .bow::before { left: -35px; transform: rotate(-15deg); }
 .bow::after { right: -35px; transform: rotate(15deg); }
-.gift.open .bow { opacity: 0; transition: 0.2s; }
+.gift.open .bow {
+    opacity: 0;
+    transition: 0.2s;
+}
 
 /* ---------- FIREWORK ---------- */
 .firework{
-    position:fixed; width:15px; height:15px;
-    background:#FFD700; border-radius:50%;
-    animation:boom 1s; z-index:999;
+    position:fixed;
+    width:15px;
+    height:15px;
+    background:#FFD700;
+    border-radius:50%;
+    animation:boom 1s;
+    z-index:999;
 }
-@keyframes boom{ from{ transform:scale(1); opacity:1; } to{ transform:scale(8); opacity:0; } }
+@keyframes boom{
+    from{ transform:scale(1); opacity:1; }
+    to{ transform:scale(8); opacity:0; }
+}
 
-/* ==========================================================
-   ACHIEVEMENT MODAL (การ์ดอวยพร - ขยายฟอนต์ใหญ่สะใจทุกบรรทัด)
-========================================================== */
+/* =========================
+   ACHIEVEMENT MODAL (Popup)
+========================= */
+/* =========================
+   ACHIEVEMENT MODAL (Popup ปรับใหม่ให้สวยเป๊ะ)
+========================= */
 .modal-overlay {
-    display: none; position: fixed; top: 0; left: 0; 
-    width: 100%; height: 100%; background: rgba(0, 0, 0, 0.85);
-    z-index: 2000; justify-content: center; align-items: center; padding: 20px;
+    display: none;
+    position: fixed;
+    top: 0; left: 0; 
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
 }
-.modal-overlay.show { display: flex; animation: fadeIn 0.5s ease; }
+.modal-overlay.show {
+    display: flex;
+    animation: fadeIn 0.5s ease;
+}
 
+/* จัดกึ่งกลางจอแบบยืดหยุ่น */
 .modal-content-wrapper {
-    position: relative; display: flex; align-items: center;
-    justify-content: center; width: 100%; max-width: 1000px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 900px; /* ขยายกรอบรองรับรูปซ้ายขวา */
+    padding: 0 40px;
 }
 
+/* ตัวการ์ด Achievement หลัก */
 .achievement-card {
-    background: #212121; border: 4px solid #555555; outline: 4px solid #000000;
-    padding: 65px 45px 45px; text-align: center; position: relative;
-    box-shadow: 15px 15px 0 rgba(0,0,0,0.6); z-index: 10; width: 100%;
-    max-width: 680px; margin: 0 auto;
+    background: #212121;
+    border: 4px solid #555555;
+    outline: 4px solid #000000;
+    padding: 50px 30px 35px;
+    text-align: center;
+    position: relative;
+    box-shadow: 15px 15px 0 rgba(0,0,0,0.6);
+    z-index: 10;
+    width: 100%;
+    max-width: 550px; /* ควบคุมความกว้างการ์ดให้อ่านง่ายกำลังดี */
+    margin: 0 auto;
 }
 
-/* ฟอนต์หัวข้อใหญ่เต็มตา */
+/* หัวข้อและข้อความ */
 .achieve-title {
-    color: #FFFF55; font-size: 28px; margin-bottom: 18px;
-    text-shadow: 3px 3px 0 #3f3f15;
+    color: #FFFF55; 
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 0 #3f3f15;
+    font-family: 'ARMBOX MOON Night', 'Press Start 2P', cursive;
 }
 .achieve-desc {
-    color: #FFFFFF; font-size: 22px; margin-bottom: 28px;
+    color: #FFFFFF;
+    font-size: 14px;
+    margin-bottom: 20px;
+    font-family: 'ARMBOX MOON Night', 'Press Start 2P', cursive;
 }
+
+/* ⚠️ แก้ปัญหาข้อความไทยตกลงมาเป็นบรรทัดละคำ */
 .achieve-msg {
-    color: #DDDDDD; font-size: 19px; /* ขยายข้อความอวยพรข้างในให้ใหญ่ อ่านง่ายสุดๆ */
-    line-height: 2.5; margin-bottom: 40px; text-align: center; white-space: normal;
+    color: #AAAAAA;
+    font-size: 13px; /* ปรับขนาดให้พอดี ไม่ยาวเป็นพรืด */
+    line-height: 2.2;
+    margin-bottom: 30px;
+    font-family: 'ARMBOX MOON Night', 'Press Start 2P', cursive;
+    text-align: center;
+    white-space: normal; /* บังคับให้ตัดคำตามความกว้างปกติ */
 }
+
 .close-btn {
-    margin-top: 0; padding: 22px 45px; font-size: 18px; /* ปุ่ม Continue ใหญ่ชัดเจน */
+    margin-top: 0;
+    padding: 15px 30px;
+    font-family: 'ARMBOX MOON Night', 'Press Start 2P', cursive;
 }
 
-/* เค้ก CSS */
+/* เค้ก CSS ด้านบนการ์ด */
 .css-cake {
-    position: absolute; top: -35px; left: 50%; transform: translateX(-50%);
-    width: 90px; height: 45px; background: #D78A76; border: 4px solid #222; z-index: 20;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 40px;
+    background: #D78A76;
+    border: 4px solid #222;
+    z-index: 20;
 }
-.css-cake .icing { width: 100%; height: 18px; background: #fff; border-bottom: 4px solid #ddd; }
-.css-cake .cherry { position: absolute; width: 16px; height: 16px; background: #E53935; border: 4px solid #8E0000; top: -12px; }
-.cherry1 { left: 8px; } .cherry2 { left: 33px; top: -16px; } .cherry3 { right: 8px; }
+.css-cake .icing {
+    width: 100%;
+    height: 16px;
+    background: #fff;
+    border-bottom: 4px solid #ddd;
+}
+.css-cake .cherry {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #E53935;
+    border: 4px solid #8E0000;
+    top: -10px;
+}
+.cherry1 { left: 8px; }
+.cherry2 { left: 28px; top: -14px; }
+.cherry3 { right: 8px; }
 
-/* ---------- IMAGE NPCs ---------- */
+/* =========================
+   IMAGE NPCs (จัดตำแหน่งใหม่ให้อยู่ข้างการ์ดสวยๆ ไม่ทับซ้อน)
+========================= */
 .img-npc {
-    position: absolute; height: 400px; width: auto; bottom: -20px;
-    z-index: 5; pointer-events: none; filter: drop-shadow(8px 8px 0 rgba(0,0,0,0.6));
-}
-.npc-left { left: -50px; }
-.npc-right { right: -50px; }
-
-/* ==========================================================
-   📱 MOBILE RESPONSIVE (มือถือ - ฟอนต์ใหญ่พอดีจอ ไม่ล้น ไม่เล็ก)
-========================================================== */
-@media(max-width: 1024px) {
-    .npc-left { left: -10px; } .npc-right { right: -10px; }
+    position: absolute;
+    height: 380px; /* กำหนดความสูงพอดีๆ ไม่ใหญ่เกินไป */
+    width: auto;
+    bottom: -20px;
+    z-index: 5;
+    pointer-events: none;
+    filter: drop-shadow(8px 8px 0 rgba(0,0,0,0.6));
 }
 
+/* ล็อกตำแหน่งซ้ายและขวาให้อิงกับกล่อง Wrapper นอกการ์ด */
+.npc-left { 
+    left: 10px; 
+}
+.npc-right { 
+    right: 10px; 
+}
+
+/* 📱 สำหรับมือถือและจอเล็ก */
 @media (max-width: 768px) {
-    .card { width: 94%; padding: 30px 20px; border-width: 5px; }
-    .title { font-size: 26px; }
-    .subtitle { font-size: 16px; }
-    .message { font-size: 15px; line-height: 2; }
-    .minecraft-btn { padding: 18px; font-size: 15px; width: 100%; margin-bottom: 12px; }
-    .sound-btn { padding: 14px; font-size: 14px; width: 100%; }
+    .modal-content-wrapper { padding: 0 10px; max-width: 100%; }
+    .achievement-card { padding: 45px 15px 25px; }
+    .achieve-msg { font-size: 11px; line-height: 2; }
+    
+    /* ในมือถือให้ซ่อนรูป NPC ข้างๆ ไปก่อน เพื่อป้องกันการบังตัวหนังสือของการ์ด */
+    .img-npc { display: none; }
+}
 
-    .minecraft-scene { transform: scale(0.6); transform-origin: bottom center; height: 180px; margin-top: 5px; }
-    .welcome-sign { top: -25px; font-size: 16px; }
-    .ground { height: 90px; border-top-width: 6px; }
-    .ground::after { height: 35px; }
+/* =====================================
+   📱 MOBILE RESPONSIVE (รองรับทุกหน้าจอ)
+===================================== */
+/* แท็บเล็ต (iPad) */
+@media(max-width: 900px) {
+    .npc-left { left: -40px; }
+    .npc-right { right: -40px; }
+}
 
+/* โทรศัพท์มือถือ */
+@media (max-width: 768px) {
+    /* ปรับขนาดหน้าแรก */
+    .card { width: 92%; padding: 30px 20px; border-width: 5px; }
+    .title { font-size: 20px; }
+    .subtitle { font-size: 14px; }
+    .message { font-size: 12px; line-height: 1.8; }
+    .minecraft-btn { padding: 15px 20px; font-size: 11px; width: 100%; margin-bottom: 10px; }
+    .sound-btn { padding: 12px 20px; font-size: 11px; width: 100%; }
+
+    /* ย่อส่วนฉากหมู่บ้าน */
+    .minecraft-scene {
+        transform: scale(0.6);
+        transform-origin: bottom center;
+        height: 200px; 
+        margin-top: 10px;
+    }
+    .welcome-sign { top: -20px; }
+    .ground { height: 100px; border-top-width: 8px; }
+    .ground::after { height: 40px; }
+
+    /* ปรับขนาดกล่องของขวัญ */
     .gift-container { margin-top: 10px; }
-    .gift { width: 100px; height: 85px; border-width: 5px; }
-    .gift::before { width: 14px; } .gift::after { height: 14px; top: 40%; }
+    .gift { width: 100px; height: 85px; border-width: 6px; }
+    .gift::before { width: 14px; }
+    .gift::after { height: 14px; top: 40%; }
     .bow { transform: translateX(-50%) scale(0.8); top: -22px; }
-    .gift-text { font-size: 14px; }
 
+    /* ปรับแกลลอรี่รูปภาพ */
     .gallery { gap: 12px; }
-    .photo-card { padding: 8px; border-width: 4px; width: 46%; }
-    .photo-card img { width: 100%; height: 120px; border-width: 2px; }
-    .photo-card p { font-size: 12px; margin-top: 8px; }
+    .photo-card { padding: 8px; border-width: 5px; width: 45%; }
+    .photo-card img { width: 100%; height: 120px; border-width: 3px; }
+    .photo-card p { font-size: 9px; margin-top: 10px; }
 
-    /* หน้าต่าง Achievement บนมือถือ - ขยายฟอนต์ให้ใหญ่ อ่านง่ายสบายตา */
-    .modal-overlay { padding: 10px; }
-    .achievement-card { padding: 50px 20px 30px; border-width: 3px; outline-width: 3px; max-width: 100%; }
-    .achieve-title { font-size: 22px; }
-    .achieve-desc { font-size: 16px; margin-bottom: 20px; }
-    .achieve-msg { font-size: 15px; line-height: 2.2; margin-bottom: 30px; } /* ใหญ่ชัดเจนบนมือถือ */
-    .close-btn { width: 100%; padding: 16px; font-size: 16px; }
+    /* ปรับหน้าต่าง Popup Achievement */
+    .modal-content-wrapper { width: 95%; }
+    .achievement-card { 
+        padding: 50px 15px 25px; 
+        border-width: 3px;
+        outline-width: 3px;
+    }
+    .achieve-title { font-size: 18px; }
+    .achieve-desc { font-size: 14px; margin-bottom: 20px; }
+    .achieve-msg { font-size: 18px; line-height: 1.8; margin-bottom: 25px; } /* ปรับขนาดฟอนต์บนมือถือให้พอดี */
+    .close-btn { width: 100%; padding: 15px; }
     .css-cake { transform: translateX(-50%) scale(0.8); top: -25px; }
 
-    .img-npc { height: 180px; bottom: -10px; z-index: 15; }
-    .npc-left { left: -10px; } .npc-right { right: -10px; }
 }
