@@ -524,19 +524,18 @@ body.night{
 /* =========================
    IMAGE NPCs (ตัวละครประกบข้าง)
 ========================= */
-.img-npc {
-    position: absolute;
-    height: clamp(220px, 35vh, 320px); 
-    width: clamp(100px, 15vw, 150px); 
-    object-fit: cover;
-    object-position: center;
-    bottom: -15px;
-    z-index: 1;
-    pointer-events: none;
-    filter: drop-shadow(8px 8px 0 rgba(0,0,0,0.6));
-}
-.npc-left { left: -70px; }
-.npc-right { right: -70px; }
+/* แสดงรูป NPC ในมือถือ + ย่อขนาดให้พอดีจอ */
+    .img-npc { 
+        display: block !important; 
+        height: 380px; /* ย่อรูปให้เล็กลงครึ่งนึงสำหรับมือถือ */
+        bottom: -100px; /* ปรับระดับเท้าให้พอดีการ์ด */
+    }
+    .npc-left { 
+        left: -160px; /* ดึงรูปเข้ามาใกล้การ์ดมากขึ้น */
+    }
+    .npc-right { 
+        right: -160px; 
+    }
 
 /* =====================================
    📱 MOBILE RESPONSIVE (รองรับทุกหน้าจอ)
@@ -594,6 +593,4 @@ body.night{
     .close-btn { width: 100%; padding: 15px; }
     .css-cake { transform: translateX(-50%) scale(0.8); top: -25px; }
 
-    /* ซ่อนรูป NPC ในมือถือ */
-    .img-npc { display: none; }
 }
