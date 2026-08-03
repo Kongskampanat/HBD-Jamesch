@@ -430,6 +430,9 @@ body.night{
 /* =========================
    ACHIEVEMENT MODAL (Popup)
 ========================= */
+/* =========================
+   ACHIEVEMENT MODAL (Popup ปรับใหม่ให้สวยเป๊ะ)
+========================= */
 .modal-overlay {
     display: none;
     position: fixed;
@@ -444,58 +447,66 @@ body.night{
     display: flex;
     animation: fadeIn 0.5s ease;
 }
+
+/* จัดกึ่งกลางจอแบบยืดหยุ่น */
 .modal-content-wrapper {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-    max-width: 750px; /* ขยายความกว้างสูงสุดของการ์ดเพิ่มขึ้น */
-    padding: 0 20px;
+    max-width: 900px; /* ขยายกรอบรองรับรูปซ้ายขวา */
+    padding: 0 40px;
 }
+
+/* ตัวการ์ด Achievement หลัก */
 .achievement-card {
     background: #212121;
     border: 4px solid #555555;
     outline: 4px solid #000000;
-    padding: 50px 40px 35px;
+    padding: 50px 30px 35px;
     text-align: center;
     position: relative;
     box-shadow: 15px 15px 0 rgba(0,0,0,0.6);
     z-index: 10;
     width: 100%;
-    max-width: 650px; /* กำหนดความกว้างการ์ดให้อ่านง่าย ไม่ผอมยาว */
+    max-width: 550px; /* ควบคุมความกว้างการ์ดให้อ่านง่ายกำลังดี */
     margin: 0 auto;
 }
 
-/* ข้อความอวยพร (มีฟอนต์ไทย + ขนาดที่ถูกต้อง) */
+/* หัวข้อและข้อความ */
 .achieve-title {
     color: #FFFF55; 
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 10px;
     text-shadow: 2px 2px 0 #3f3f15;
     font-family: 'ARMBOX MOON Night', 'Press Start 2P', cursive;
 }
 .achieve-desc {
     color: #FFFFFF;
-    font-size: 16px;
-    margin-bottom: 25px;
+    font-size: 14px;
+    margin-bottom: 20px;
     font-family: 'ARMBOX MOON Night', 'Press Start 2P', cursive;
 }
+
+/* ⚠️ แก้ปัญหาข้อความไทยตกลงมาเป็นบรรทัดละคำ */
 .achieve-msg {
     color: #AAAAAA;
-    font-size: 14px; /* ปรับลดขนาดลงมานิดนึงเพื่อให้ข้อความยาวๆ ไม่ตัดบรรทัดน่าเกลียด */
+    font-size: 13px; /* ปรับขนาดให้พอดี ไม่ยาวเป็นพรืด */
     line-height: 2.2;
     margin-bottom: 30px;
     font-family: 'ARMBOX MOON Night', 'Press Start 2P', cursive;
-    word-break: keep-all; /* ป้องกันคำไทยตัดแปลกๆ */
+    text-align: center;
+    white-space: normal; /* บังคับให้ตัดคำตามความกว้างปกติ */
 }
+
 .close-btn {
     margin-top: 0;
     padding: 15px 30px;
     font-family: 'ARMBOX MOON Night', 'Press Start 2P', cursive;
 }
 
-/* เค้ก CSS */
+/* เค้ก CSS ด้านบนการ์ด */
 .css-cake {
     position: absolute;
     top: -30px;
@@ -526,20 +537,35 @@ body.night{
 .cherry3 { right: 8px; }
 
 /* =========================
-   IMAGE NPCs (ตัวละครประกบข้าง)
+   IMAGE NPCs (จัดตำแหน่งใหม่ให้อยู่ข้างการ์ดสวยๆ ไม่ทับซ้อน)
 ========================= */
-/* แสดงรูป NPC ในมือถือ + ย่อขนาดให้พอดีจอ */
-    .img-npc { 
-        display: block !important; 
-        height: 380px; /* ย่อรูปให้เล็กลงครึ่งนึงสำหรับมือถือ */
-        bottom: -100px; /* ปรับระดับเท้าให้พอดีการ์ด */
-    }
-    .npc-left { 
-        left: -160px; /* ดึงรูปเข้ามาใกล้การ์ดมากขึ้น */
-    }
-    .npc-right { 
-        right: -160px; 
-    }
+.img-npc {
+    position: absolute;
+    height: 380px; /* กำหนดความสูงพอดีๆ ไม่ใหญ่เกินไป */
+    width: auto;
+    bottom: -20px;
+    z-index: 5;
+    pointer-events: none;
+    filter: drop-shadow(8px 8px 0 rgba(0,0,0,0.6));
+}
+
+/* ล็อกตำแหน่งซ้ายและขวาให้อิงกับกล่อง Wrapper นอกการ์ด */
+.npc-left { 
+    left: 10px; 
+}
+.npc-right { 
+    right: 10px; 
+}
+
+/* 📱 สำหรับมือถือและจอเล็ก */
+@media (max-width: 768px) {
+    .modal-content-wrapper { padding: 0 10px; max-width: 100%; }
+    .achievement-card { padding: 45px 15px 25px; }
+    .achieve-msg { font-size: 11px; line-height: 2; }
+    
+    /* ในมือถือให้ซ่อนรูป NPC ข้างๆ ไปก่อน เพื่อป้องกันการบังตัวหนังสือของการ์ด */
+    .img-npc { display: none; }
+}
 
 /* =====================================
    📱 MOBILE RESPONSIVE (รองรับทุกหน้าจอ)
