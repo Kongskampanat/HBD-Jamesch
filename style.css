@@ -1909,3 +1909,36 @@ border:
     .npc-left, .npc-right { display: none; }
     .achievement-card { padding: 50px 15px 20px; }
 }
+
+/* =========================
+   Image NPCs (รองรับภาพ 16:9)
+========================= */
+.img-npc {
+    position: absolute;
+    height: 350px; /* เพิ่มความสูงให้ตัวละครดูใหญ่และเด่นขึ้น */
+    width: 200px;  /* บีบความกว้างของกรอบภาพให้เป็นแนวตั้ง */
+    
+    /* พระเอกอยู่ตรงนี้: สั่งให้ตัดขอบซ้ายขวาของ 16:9 ทิ้ง และโฟกัสตรงกลางภาพ */
+    object-fit: cover; 
+    object-position: center; 
+    
+    bottom: -30px;
+    z-index: 1; /* ให้อยู่หลังการ์ด (การ์ดมี z-index:10) จะได้ไม่บังปุ่มกด */
+    filter: drop-shadow(8px 8px 0 rgba(0,0,0,0.6)); 
+    pointer-events: none; /* ป้องกันไม่ให้กรอบภาพใสๆ ไปขวางการกดปุ่ม */
+}
+
+/* ดันรูปออกไปด้านซ้ายและขวาให้พอดีกับการ์ด */
+.npc-left { 
+    left: -120px; 
+}
+.npc-right { 
+    right: -120px; 
+}
+
+/* สำหรับมือถือ (ซ่อนรูป NPC เพื่อไม่ให้ล้นจอ) */
+@media(max-width: 768px) {
+    .img-npc { 
+        display: none; 
+    }
+}
