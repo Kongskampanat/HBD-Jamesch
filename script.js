@@ -315,3 +315,35 @@ window.onload=function(){
 
 
 };
+const enterButton =
+document.querySelector("#enterWorld");
+
+
+if(enterButton){
+
+
+enterButton.addEventListener(
+"click",
+()=>{
+
+
+const world =
+document.querySelector("#birthday-world");
+
+
+document.querySelector(".card")
+.style.display="none";
+
+
+world.classList.add("show");
+
+
+createFireworks();
+
+
+}
+
+);
+
+
+}
