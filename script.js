@@ -9,39 +9,33 @@
 
 function enterWorld(){
 
-    const button =
-    document.querySelector(".minecraft-btn");
+
+const firstPage =
+document.querySelector(".card");
 
 
-    if(button){
-
-        button.innerHTML =
-        "LOADING WORLD...";
-
-        button.disabled=true;
-
-    }
+const world =
+document.querySelector("#birthday-world");
 
 
-    setTimeout(()=>{
+if(firstPage){
 
-
-        createFireworks();
-
-
-        showMessage(
-
-        "Welcome to Jamesch's Birthday World! 🎮"
-
-        );
-
-
-    },1500);
-
-
+firstPage.style.display="none";
 
 }
 
+
+if(world){
+
+world.classList.add("show");
+
+}
+
+
+createFireworks();
+
+
+}
 
 
 /* ---------- TYPE MESSAGE ---------- */
