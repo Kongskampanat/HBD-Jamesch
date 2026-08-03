@@ -322,23 +322,29 @@ document.querySelector("#enterWorld");
 if(enterButton){
 
 
-enterButton.addEventListener(
-"click",
-()=>{
+function enterWorld(){
+
+
+const firstPage =
+document.querySelector(".card");
 
 
 const world =
 document.querySelector("#birthday-world");
 
 
-document.querySelector(".card")
-.style.display="none";
+if(firstPage){
 
+firstPage.style.display="none";
+
+}
+
+
+if(world){
 
 world.classList.add("show");
 
-
-createFireworks();
+}
 
 
 }
