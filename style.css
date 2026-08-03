@@ -1,3 +1,1566 @@
+/* =====================================
+   HBD Jamesch - Minecraft Birthday Theme
+   style.css
+===================================== */
+
+
+/* ---------- RESET ---------- */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+body{
+
+    font-family:'Press Start 2P', cursive;
+
+    min-height:100vh;
+
+    overflow-x:hidden;
+
+    background:#75CFFF;
+
+    color:white;
+
+}
+
+
+
+/* ---------- SKY ---------- */
+
+
+.sky{
+
+    position:fixed;
+
+    width:100%;
+
+    height:100%;
+
+    top:0;
+
+    left:0;
+
+    overflow:hidden;
+
+    z-index:-3;
+
+}
+
+
+/* Sun */
+
+.sun{
+
+    position:absolute;
+
+    width:120px;
+
+    height:120px;
+
+    right:12%;
+
+    top:80px;
+
+    background:#FFD54F;
+
+    border-radius:50%;
+
+    box-shadow:
+
+    0 0 40px #FFD54F;
+
+}
+
+
+/* ---------- CLOUD ---------- */
+
+
+.cloud{
+
+    position:absolute;
+
+    width:180px;
+
+    height:55px;
+
+    background:white;
+
+    border-radius:40px;
+
+    opacity:.9;
+
+    animation:cloudMove linear infinite;
+
+}
+
+
+.cloud::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:80px;
+
+    height:80px;
+
+    background:white;
+
+    border-radius:50%;
+
+    left:20px;
+
+    top:-40px;
+
+}
+
+
+.cloud::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:90px;
+
+    height:90px;
+
+    background:white;
+
+    border-radius:50%;
+
+    right:20px;
+
+    top:-45px;
+
+}
+
+
+
+.cloud1{
+
+    top:100px;
+
+    left:-250px;
+
+    animation-duration:45s;
+
+}
+
+
+.cloud2{
+
+    top:250px;
+
+    left:-300px;
+
+    animation-duration:70s;
+
+}
+
+
+
+@keyframes cloudMove{
+
+from{
+
+transform:translateX(-300px);
+
+}
+
+to{
+
+transform:translateX(140vw);
+
+}
+
+}
+
+
+
+/* ---------- WORLD ---------- */
+
+
+.world{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    position:relative;
+
+}
+
+
+
+/* ---------- GROUND ---------- */
+
+
+.ground{
+
+    position:fixed;
+
+    bottom:0;
+
+    width:100%;
+
+    height:180px;
+
+    background:#4CAF50;
+
+    border-top:12px solid #2E7D32;
+
+    z-index:-1;
+
+}
+
+
+.ground::after{
+
+    content:"";
+
+    position:absolute;
+
+    bottom:0;
+
+    width:100%;
+
+    height:80px;
+
+    background:#795548;
+
+}
+
+
+
+/* ---------- CARD ---------- */
+
+
+.card{
+
+    background:white;
+
+    color:#333;
+
+    width:700px;
+
+    padding:45px;
+
+    text-align:center;
+
+    border:8px solid #222;
+
+    box-shadow:
+
+    15px 15px 0 #000;
+
+    animation:float 3s infinite;
+
+}
+
+
+
+@keyframes float{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+
+50%{
+
+transform:translateY(-15px);
+
+}
+
+}
+
+
+
+/* ---------- TITLE ---------- */
+
+
+.title{
+
+
+font-size:35px;
+
+line-height:1.7;
+
+color:#43A047;
+
+
+text-shadow:
+
+4px 4px #222;
+
+
+}
+
+
+.subtitle{
+
+
+margin-top:20px;
+
+font-size:18px;
+
+color:#FBC02D;
+
+text-shadow:
+
+3px 3px #333;
+
+}
+
+
+
+/* ---------- MESSAGE ---------- */
+
+
+.message{
+
+
+margin-top:35px;
+
+font-size:13px;
+
+line-height:2.2;
+
+color:#555;
+
+
+}
+
+
+
+/* ---------- BUTTON ---------- */
+
+
+.minecraft-btn{
+
+
+margin-top:35px;
+
+padding:20px 35px;
+
+
+font-family:
+
+'Press Start 2P';
+
+
+font-size:14px;
+
+
+background:#4CAF50;
+
+
+color:white;
+
+
+border:
+
+5px solid #1B5E20;
+
+
+box-shadow:
+
+8px 8px #222;
+
+
+cursor:pointer;
+
+
+transition:.2s;
+
+
+}
+
+
+
+.minecraft-btn:hover{
+
+
+background:#8BC34A;
+
+
+transform:
+
+translateY(-5px);
+
+
+}
+
+
+
+.minecraft-btn:active{
+
+
+box-shadow:
+
+3px 3px #222;
+
+
+transform:
+
+translateY(5px);
+
+
+}
+
+
+
+
+/* ---------- GIFT BOX ---------- */
+
+
+.gift{
+
+
+width:120px;
+
+height:120px;
+
+margin:30px auto;
+
+
+background:#E53935;
+
+
+border:
+
+8px solid #8E0000;
+
+
+position:relative;
+
+
+cursor:pointer;
+
+
+}
+
+
+.gift::before{
+
+
+content:"";
+
+
+position:absolute;
+
+
+left:45%;
+
+
+width:15px;
+
+
+height:100%;
+
+
+background:#FFD700;
+
+
+}
+
+
+
+.gift::after{
+
+
+content:"";
+
+
+position:absolute;
+
+
+top:45%;
+
+
+height:15px;
+
+
+width:100%;
+
+
+background:#FFD700;
+
+
+}
+
+
+
+/* ---------- IMAGE GALLERY ---------- */
+
+
+.gallery{
+
+
+display:flex;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+gap:20px;
+
+
+margin-top:30px;
+
+
+}
+
+
+.gallery img{
+
+
+width:180px;
+
+height:180px;
+
+object-fit:cover;
+
+
+border:
+
+8px solid white;
+
+
+box-shadow:
+
+8px 8px #222;
+
+
+transition:.3s;
+
+
+}
+
+
+
+.gallery img:hover{
+
+
+transform:
+
+scale(1.1)
+rotate(3deg);
+
+
+}
+
+
+
+/* ---------- FIREWORK ---------- */
+
+.firework{
+
+position:fixed;
+
+width:15px;
+
+height:15px;
+
+background:#FFD700;
+
+border-radius:50%;
+
+animation:boom 1s;
+
+z-index:999;
+
+}
+
+
+
+@keyframes boom{
+
+from{
+
+transform:scale(1);
+
+opacity:1;
+
+}
+
+
+to{
+
+transform:scale(8);
+
+opacity:0;
+
+}
+
+}
+
+/* ---------- MOBILE ---------- */
+
+
+@media(max-width:768px){
+
+
+.card{
+
+
+width:90%;
+
+padding:25px;
+
+
+}
+
+
+
+.title{
+
+
+font-size:22px;
+
+
+}
+
+
+.subtitle{
+
+
+font-size:12px;
+
+
+}
+
+
+
+.message{
+
+
+font-size:10px;
+
+
+}
+
+
+
+.minecraft-btn{
+
+
+font-size:10px;
+
+padding:15px;
+
+
+}
+
+
+
+.gallery img{
+
+
+width:120px;
+
+height:120px;
+
+
+}
+
+
+}
+/* =========================
+   Premium Minecraft Gallery
+========================= */
+
+
+.gallery-section{
+
+margin-top:50px;
+
+}
+
+
+
+.gallery{
+
+
+display:flex;
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+gap:25px;
+
+
+}
+
+
+
+.photo-card{
+
+
+background:#8D6E63;
+
+
+padding:12px;
+
+
+border:
+
+8px solid #5D4037;
+
+
+box-shadow:
+
+8px 8px 0 #222;
+
+
+transition:.3s;
+
+
+}
+
+
+
+.photo-card:hover{
+
+
+transform:
+
+translateY(-15px)
+scale(1.05);
+
+
+}
+
+
+
+.photo-card img{
+
+
+width:180px;
+
+height:180px;
+
+
+object-fit:cover;
+
+
+border:
+
+5px solid #fff;
+
+
+}
+
+
+
+.photo-card p{
+
+
+margin-top:15px;
+
+
+font-size:10px;
+
+
+color:white;
+
+
+}
+/* =========================
+ Minecraft Gift Box
+========================= */
+
+
+.gift-container{
+
+margin-top:40px;
+
+text-align:center;
+
+}
+
+
+
+.gift{
+
+
+width:130px;
+
+height:110px;
+
+background:#E53935;
+
+
+border:
+
+8px solid #8E0000;
+
+
+margin:auto;
+
+
+position:relative;
+
+
+cursor:pointer;
+
+
+box-shadow:
+
+10px 10px 0 #222;
+
+
+transition:.5s;
+
+
+animation:
+
+giftFloat 2s infinite;
+
+
+}
+
+
+
+.gift::before{
+
+
+content:"";
+
+
+position:absolute;
+
+
+left:50%;
+
+
+transform:translateX(-50%);
+
+
+width:18px;
+
+
+height:100%;
+
+
+background:#FFD700;
+
+
+}
+
+
+
+.gift::after{
+
+
+content:"";
+
+
+position:absolute;
+
+
+top:45%;
+
+
+left:0;
+
+
+width:100%;
+
+
+height:18px;
+
+
+background:#FFD700;
+
+
+}
+
+
+
+.gift:hover{
+
+
+transform:
+
+scale(1.15);
+
+
+}
+
+
+
+@keyframes giftFloat{
+
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+
+50%{
+
+transform:translateY(-12px);
+
+}
+
+}
+
+
+
+.gift-text{
+
+
+margin-top:20px;
+
+
+font-size:12px;
+
+
+color:#333;
+
+
+}
+/* Hidden World */
+
+.hidden-world{
+
+display:none;
+
+}
+
+
+.hidden-world.show{
+
+display:block;
+
+animation:
+
+fadeIn 1.5s;
+
+}
+
+
+@keyframes fadeIn{
+
+
+from{
+
+opacity:0;
+
+transform:translateY(50px);
+
+}
+
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+}
+.hidden-world{
+
+display:none;
+
+}
+
+
+.hidden-world.show{
+
+display:block;
+
+animation:fadeIn 1.5s ease;
+
+}
+
+
+
+@keyframes fadeIn{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+.hidden-world{
+
+display:none;
+
+}
+
+
+.hidden-world.show{
+
+display:block;
+
+animation:fadeIn 1.5s ease;
+
+}
+
+
+
+@keyframes fadeIn{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+
+
+.gift.open{
+
+transform:
+
+rotateX(180deg)
+scale(1.3);
+
+
+}
+/* =========================
+   Premium Minecraft Gift Open
+========================= */
+
+
+.gift-container{
+
+text-align:center;
+
+margin:50px auto;
+
+}
+
+
+
+.gift{
+
+width:140px;
+
+height:120px;
+
+background:#d32f2f;
+
+border:8px solid #7f0000;
+
+position:relative;
+
+margin:auto;
+
+cursor:pointer;
+
+box-shadow:
+
+10px 10px 0 #222;
+
+animation:giftFloat 2s infinite;
+
+transition:0.8s;
+
+}
+
+
+
+/* Ribbon vertical */
+
+.gift::before{
+
+content:"";
+
+position:absolute;
+
+left:50%;
+
+transform:translateX(-50%);
+
+width:20px;
+
+height:100%;
+
+background:#ffd700;
+
+}
+
+
+
+/* Ribbon horizontal */
+
+.gift::after{
+
+content:"";
+
+position:absolute;
+
+top:45%;
+
+left:0;
+
+width:100%;
+
+height:20px;
+
+background:#ffd700;
+
+}
+
+
+
+
+@keyframes giftFloat{
+
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+
+50%{
+
+transform:translateY(-15px);
+
+}
+
+
+}
+
+
+
+/* เปิดกล่อง */
+
+
+.gift.open{
+
+
+animation:none;
+
+
+transform:
+
+rotateX(70deg)
+
+translateY(-20px);
+
+
+box-shadow:
+
+0 0 40px #ffd700;
+
+
+}
+
+
+
+/* แสงจากกล่อง */
+
+
+.gift.open:after{
+
+
+box-shadow:
+
+0 -80px 40px 20px #fff176;
+
+
+}
+
+
+
+.gift-text{
+
+
+margin-top:20px;
+
+font-size:12px;
+
+color:#333;
+
+
+}
+.sound-btn{
+
+
+margin-top:20px;
+
+padding:12px 20px;
+
+
+font-family:'Press Start 2P';
+
+
+font-size:10px;
+
+
+background:#2196F3;
+
+
+color:white;
+
+
+border:5px solid #0D47A1;
+
+
+box-shadow:5px 5px #222;
+
+
+cursor:pointer;
+
+
+}
+/* =========================
+   Minecraft Night World
+========================= */
+
+
+/* เปลี่ยนท้องฟ้าหลังเข้าโลก */
+
+body.night{
+
+background:#101840;
+
+}
+
+
+
+/* Moon */
+
+.moon{
+
+position:fixed;
+
+top:70px;
+
+right:15%;
+
+width:120px;
+
+height:120px;
+
+background:#fff3b0;
+
+border-radius:50%;
+
+box-shadow:
+
+0 0 50px #fff3b0;
+
+z-index:-2;
+
+}
+
+
+
+/* Stars */
+
+.star{
+
+position:fixed;
+
+width:5px;
+
+height:5px;
+
+background:white;
+
+border-radius:50%;
+
+box-shadow:
+
+0 0 10px white;
+
+animation:twinkle 2s infinite alternate;
+
+z-index:-2;
+
+}
+
+
+
+@keyframes twinkle{
+
+
+from{
+
+opacity:.3;
+
+}
+
+
+to{
+
+opacity:1;
+
+}
+
+
+}
+/* =========================
+ Minecraft Village Scene
+========================= */
+
+
+.minecraft-scene{
+
+position:relative;
+
+height:350px;
+
+margin-top:40px;
+
+}
+
+
+
+/* Welcome Sign */
+
+
+.welcome-sign{
+
+position:absolute;
+
+top:20px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+
+background:#8B5A2B;
+
+border:
+
+8px solid #4E342E;
+
+
+padding:20px;
+
+
+font-size:14px;
+
+
+text-align:center;
+
+
+color:white;
+
+
+box-shadow:
+
+8px 8px #222;
+
+
+}
+
+
+
+/* Trees */
+
+
+.tree{
+
+position:absolute;
+
+bottom:40px;
+
+}
+
+
+
+.tree1{
+
+left:15%;
+
+}
+
+
+.tree2{
+
+right:15%;
+
+}
+
+
+
+.trunk{
+
+
+width:35px;
+
+height:120px;
+
+background:#795548;
+
+margin:auto;
+
+
+border:
+
+5px solid #4E342E;
+
+
+}
+
+
+
+.leaves{
+
+
+width:120px;
+
+height:120px;
+
+background:#388E3C;
+
+border:
+
+8px solid #1B5E20;
+
+
+border-radius:20px;
+
+
+margin:auto;
+
+
+}
+
+
+
+
+/* House */
+
+
+.house{
+
+position:absolute;
+
+bottom:40px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+
+}
+
+
+
+.wall{
+
+
+width:180px;
+
+height:120px;
+
+
+background:#D7CCC8;
+
+
+border:
+
+8px solid #5D4037;
+
+
+}
+
+
+
+.roof{
+
+
+width:220px;
+
+height:50px;
+
+
+background:#B71C1C;
+
+
+border:
+
+8px solid #4E342E;
+
+
+transform:
+
+translateX(-20px)
+
+rotate(0deg);
+
+
+}
+
+
+
+.door{
+
+
+width:40px;
+
+height:70px;
+
+
+background:#5D4037;
+
+
+position:absolute;
+
+
+bottom:0;
+
+left:70px;
+
+
+border:
+
+5px solid #3E2723;
+
+
+}
 /* =========================
    โบว์บนกล่องของขวัญ (Bow)
 ========================= */
