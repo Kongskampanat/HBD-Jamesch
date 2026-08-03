@@ -941,3 +941,45 @@ color:#333;
 
 
 }
+/* Hidden World */
+
+.hidden-world{
+
+display:none;
+
+}
+
+
+.hidden-world.show{
+
+display:block;
+
+animation:
+
+fadeIn 1.5s;
+
+}
+
+
+@keyframes fadeIn{
+
+
+from{
+
+opacity:0;
+
+transform:translateY(50px);
+
+}
+
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+
+}
