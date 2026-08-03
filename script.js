@@ -31,24 +31,43 @@ function enterWorld(){
 
 }
 
-
-
 function openGift(){
 
 
-    const gift = document.querySelector(".gift");
+const gift = document.querySelector(".gift");
 
 
-    if(gift){
-
-        gift.classList.add("open");
-
-    }
+if(gift){
 
 
-    alert(
-    "🎁 Happy Birthday Jamesch ❤️\n\nWelcome to your Minecraft World!"
-    );
+gift.classList.add("open");
+
+
+createFireworks();
+
+
+}
+
+
+
+setTimeout(()=>{
+
+
+alert(
+
+"🎁 Happy Birthday Jamesch ❤️\n\n" +
+
+"Welcome to your Minecraft Adventure World!\n\n" +
+
+"May your life be full of happiness,\n" +
+
+"success and amazing adventures ⛏️✨"
+
+);
+
+
+},800);
+
 
 
 }
