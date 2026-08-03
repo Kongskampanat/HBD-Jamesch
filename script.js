@@ -71,3 +71,44 @@ alert(
 
 
 }
+// ===============================
+// Firework Effect
+// ===============================
+
+function createFireworks(){
+
+
+    for(let i = 0; i < 30; i++){
+
+
+        let firework = document.createElement("div");
+
+
+        firework.className = "firework";
+
+
+        firework.style.left =
+        Math.random()*100 + "vw";
+
+
+        firework.style.top =
+        Math.random()*60 + "vh";
+
+
+        document.body.appendChild(firework);
+
+
+
+        setTimeout(()=>{
+
+
+            firework.remove();
+
+
+        },1500);
+
+
+    }
+
+
+}
