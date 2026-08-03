@@ -52,7 +52,7 @@ if(gift){
 }
 
 
-
+createNightSky();
 createFireworks();
 
 
