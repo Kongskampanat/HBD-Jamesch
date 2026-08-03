@@ -1,10 +1,12 @@
 // ===============================
-// HBD Jamesch Minecraft World
-// script.js
+// HBD Jamesch Minecraft Birthday
 // ===============================
 
 
 function enterWorld(){
+
+    console.log("Enter World Clicked");
+
 
     const home = document.getElementById("home");
 
@@ -20,15 +22,14 @@ function enterWorld(){
 
     if(world){
 
+        world.style.display = "block";
+
         world.classList.add("show");
 
     }
 
 
-    createFireworks();
-
 }
-
 
 
 
@@ -45,56 +46,9 @@ function openGift(){
     }
 
 
-    setTimeout(()=>{
-
-        alert(
-        "🎁 Happy Birthday Jamesch ❤️\n\nWelcome to your Minecraft Adventure!"
-        );
-
-
-    },800);
-
-
-
-}
-
-
-
-
-function createFireworks(){
-
-
-    for(let i=0;i<20;i++){
-
-
-        let firework =
-        document.createElement("div");
-
-
-        firework.className="firework";
-
-
-        firework.style.left =
-        Math.random()*100+"vw";
-
-
-        firework.style.top =
-        Math.random()*60+"vh";
-
-
-        document.body.appendChild(firework);
-
-
-
-        setTimeout(()=>{
-
-            firework.remove();
-
-        },1500);
-
-
-
-    }
+    alert(
+    "🎁 Happy Birthday Jamesch ❤️\n\nWelcome to your Minecraft World!"
+    );
 
 
 }
