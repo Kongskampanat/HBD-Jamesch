@@ -449,19 +449,22 @@ body.night{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 90%;
-    max-width: 600px;
+    width: 100%;
+    max-width: 750px; /* ขยายความกว้างสูงสุดของการ์ดเพิ่มขึ้น */
+    padding: 0 20px;
 }
 .achievement-card {
     background: #212121;
     border: 4px solid #555555;
     outline: 4px solid #000000;
-    padding: 50px 30px 30px;
+    padding: 50px 40px 35px;
     text-align: center;
     position: relative;
     box-shadow: 15px 15px 0 rgba(0,0,0,0.6);
     z-index: 10;
     width: 100%;
+    max-width: 650px; /* กำหนดความกว้างการ์ดให้อ่านง่าย ไม่ผอมยาว */
+    margin: 0 auto;
 }
 
 /* ข้อความอวยพร (มีฟอนต์ไทย + ขนาดที่ถูกต้อง) */
@@ -480,10 +483,11 @@ body.night{
 }
 .achieve-msg {
     color: #AAAAAA;
-    font-size: 26px; /* ขนาดใหญ่ขึ้นตามที่คุณปรับไว้ */
-    line-height: 2;
+    font-size: 14px; /* ปรับลดขนาดลงมานิดนึงเพื่อให้ข้อความยาวๆ ไม่ตัดบรรทัดน่าเกลียด */
+    line-height: 2.2;
     margin-bottom: 30px;
     font-family: 'ARMBOX MOON Night', 'Press Start 2P', cursive;
+    word-break: keep-all; /* ป้องกันคำไทยตัดแปลกๆ */
 }
 .close-btn {
     margin-top: 0;
