@@ -1618,3 +1618,113 @@ border:
         15px 15px 0 #222, 
         0 0 45px rgba(255, 215, 0, 0.7); /* ตอนเอาเมาส์ชี้ แสงเบลอจะสว่างขึ้น */
 }
+
+/* =========================
+   Achievement Modal (Popup)
+========================= */
+.modal-overlay {
+    display: none; /* ซ่อนไว้ก่อน */
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85); /* พื้นหลังดำโปร่งใส */
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+}
+
+/* คลาสที่ใช้สั่งโชว์ Popup */
+.modal-overlay.show {
+    display: flex;
+    animation: fadeIn 0.5s ease;
+}
+
+.modal-content-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    max-width: 600px;
+}
+
+/* ตัวการ์ด */
+.achievement-card {
+    background: #212121; /* สีเทาดำ */
+    border: 4px solid #555555; /* ขอบในสีเทาสว่าง */
+    outline: 4px solid #000000; /* ขอบนอกสีดำ */
+    padding: 50px 30px 30px;
+    text-align: center;
+    position: relative;
+    box-shadow: 15px 15px 0 rgba(0,0,0,0.6);
+    z-index: 10;
+    width: 100%;
+}
+
+/* ไอคอนเค้กตรงกลาง */
+.cake-icon {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: -40px; /* ดันขึ้นไปให้อยู่กึ่งกลางขอบบน */
+    left: 50%;
+    transform: translateX(-50%);
+    image-rendering: pixelated; /* ทำให้ภาพดูเป็น 8-bit ไม่เบลอ */
+    filter: drop-shadow(0 10px 0 rgba(0,0,0,0.5));
+}
+
+/* ตำแหน่ง NPC ด้านข้าง */
+.npc-img {
+    position: absolute;
+    height: 250px; /* ปรับขนาดความสูง NPC ได้ที่นี่ */
+    bottom: -10px;
+    z-index: 5; /* ให้อยู่หลังการ์ดนิดนึง */
+    image-rendering: pixelated;
+    filter: drop-shadow(5px 5px 0 rgba(0,0,0,0.5));
+}
+
+.npc-left {
+    left: -120px; /* ขยับออกไปด้านซ้าย */
+}
+
+.npc-right {
+    right: -120px; /* ขยับออกไปด้านขวา */
+}
+
+/* ข้อความในหน้าต่าง */
+.achieve-title {
+    color: #FFFF55; /* สีเหลือง Minecraft */
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 0 #3f3f15;
+}
+
+.achieve-desc {
+    color: #FFFFFF;
+    font-size: 12px;
+    margin-bottom: 25px;
+}
+
+.achieve-msg {
+    color: #AAAAAA;
+    font-size: 10px;
+    line-height: 2.5;
+    margin-bottom: 30px;
+}
+
+.close-btn {
+    margin-top: 0;
+    padding: 15px 30px;
+}
+
+/* สำหรับมือถือ (ซ่อน NPC หรือย่อส่วนเพื่อไม่ให้ล้นจอ) */
+@media(max-width: 768px) {
+    .npc-left, .npc-right {
+        display: none; /* ในมือถือที่จอเล็ก แนะนำให้ซ่อน NPC เพื่อไม่ให้บังข้อความครับ */
+    }
+    .achievement-card {
+        padding: 40px 15px 20px;
+    }
+}
