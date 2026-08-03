@@ -1251,3 +1251,90 @@ cursor:pointer;
 
 
 }
+/* =========================
+   Minecraft Night World
+========================= */
+
+
+/* เปลี่ยนท้องฟ้าหลังเข้าโลก */
+
+body.night{
+
+background:#101840;
+
+}
+
+
+
+/* Moon */
+
+.moon{
+
+position:fixed;
+
+top:70px;
+
+right:15%;
+
+width:120px;
+
+height:120px;
+
+background:#fff3b0;
+
+border-radius:50%;
+
+box-shadow:
+
+0 0 50px #fff3b0;
+
+z-index:-2;
+
+}
+
+
+
+/* Stars */
+
+.star{
+
+position:fixed;
+
+width:5px;
+
+height:5px;
+
+background:white;
+
+border-radius:50%;
+
+box-shadow:
+
+0 0 10px white;
+
+animation:twinkle 2s infinite alternate;
+
+z-index:-2;
+
+}
+
+
+
+@keyframes twinkle{
+
+
+from{
+
+opacity:.3;
+
+}
+
+
+to{
+
+opacity:1;
+
+}
+
+
+}
